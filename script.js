@@ -45,7 +45,7 @@ navLinks.forEach((link) => {
   link.addEventListener("click", hideNavMenu);
 });
 
-// Dynamic Job Title Typing Effect
+// Dynamic Job Title Sliding Effect
 const dynamicJobTitle = document.querySelector(".job-title-dynamic");
 const staticJobTitle = document.querySelector(".job-title-static");
 
@@ -56,33 +56,28 @@ const jobTitles = [
   "Python Developer",
 ];
 let titleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
 
-function typeWriterEffect() {
-  const currentTitle = jobTitles[titleIndex];
-  if (isDeleting) {
-    dynamicJobTitle.textContent = currentTitle.substring(0, charIndex - 1);
-    charIndex--;
-  } else {
-    dynamicJobTitle.textContent = currentTitle.substring(0, charIndex + 1);
-    charIndex++;
-  }
+function slideJobTitle() {
+  staticJobTitle.style.display = "none"; // Hide the static title
+  dynamicJobTitle.style.transform = "translateX(100%)"; // Start off-screen to the right
+  dynamicJobTitle.style.opacity = "0"; // Start invisible
 
-  if (!isDeleting && charIndex === currentTitle.length) {
-    staticJobTitle.style.display = "none"; // Hide static title when dynamic starts
-    setTimeout(() => (isDeleting = true), 1000); // Pause at end of typing
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    titleIndex = (titleIndex + 1) % jobTitles.length;
-    // staticJobTitle.style.display = "inline"; // Uncomment if you want the static title to reappear after a full cycle
-  }
+  setTimeout(() => {
+    dynamicJobTitle.textContent = jobTitles[titleIndex];
+    dynamicJobTitle.style.transform = "translateX(0)"; // Slide in
+    dynamicJobTitle.style.opacity = "1"; // Fade in
 
-  const typingSpeed = isDeleting ? 70 : 150; // Faster deleting, slower typing
-  setTimeout(typeWriterEffect, typingSpeed);
+    setTimeout(() => {
+      dynamicJobTitle.style.transform = "translateX(-100%)"; // Slide out to the left
+      dynamicJobTitle.style.opacity = "0"; // Fade out
+      titleIndex = (titleIndex + 1) % jobTitles.length; // Move to next title
+
+      setTimeout(slideJobTitle, 500); // Wait for slide out to complete before next slide in
+    }, 2000); // Display time for each title
+  }, 500); // Delay before sliding in (matches slide out transition duration)
 }
 
-// Initial call to start the typing effect after a short delay
+// Initial call to start the sliding effect after a short delay
 window.addEventListener("load", () => {
-  setTimeout(typeWriterEffect, 500);
+  setTimeout(slideJobTitle, 500);
 });

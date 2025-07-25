@@ -28,6 +28,26 @@
   background: #4070f4;
 }
 
+/* General Link Hover Effect */
+a {
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+a:hover {
+  transform: translateY(-2px); /* Slight lift effect */
+  color: #3057d5; /* Slightly darker blue on hover for general links */
+}
+
+/* Specific overrides for button links to maintain their distinct hover */
+section .button button a:hover {
+  color: #4070f4; /* Override general link hover for buttons */
+  transform: none; /* No lift for button links */
+}
+.live-btn:hover,
+.github-btn:hover,
+.more-projects a:hover {
+  transform: none; /* No lift for project buttons */
+}
 /* navbar styling */
 nav {
   position: fixed;
@@ -169,6 +189,21 @@ nav.sticky .menu-btn {
   margin: 5px 0;
   color: #4070f4;
   min-height: 48px; /* Added to prevent layout shift during typing effect */
+  display: flex; /* Allow inline elements to sit side by side */
+  overflow: hidden; /* Hide overflowing text during slide */
+}
+
+/* Sliding Text effect styles */
+.job-title-static {
+  white-space: nowrap; /* Keep text on one line */
+}
+
+.job-title-dynamic {
+  display: inline-block; /* Essential for transform */
+  white-space: nowrap; /* Keep text on one line */
+  transform: translateX(0); /* Initial state for animation */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth sliding transition */
+  opacity: 1; /* Initial opacity for animation */
 }
 
 /* Social Icons */
@@ -187,31 +222,27 @@ nav.sticky .menu-btn {
   transform: scale(1.2);
 }
 
-/* Profile Picture Hover Effect */
+/* Profile Picture Zoom Out Effect (Container expands) */
 .profile-pic-container {
   width: 450px;
   height: 450px;
   border-radius: 50%;
-  overflow: hidden;
+  overflow: hidden; /* Keep image inside boundary */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease-in-out; /* Added for smooth scaling of the container */
+  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
 }
 
 .profile-pic-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out; /* Added for smooth image scaling */
 }
 
 .profile-pic-container:hover {
-  transform: scale(1.05); /* Slightly enlarge the container */
-}
-
-.profile-pic-container:hover img {
-  transform: scale(1.1); /* Enlarge the image inside the container */
+  transform: scale(1.05); /* Zoom out effect: container expands slightly */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
 }
 
 /* Button */
@@ -236,6 +267,8 @@ nav.sticky .menu-btn {
   border-color: #4070f4;
   background-color: #fff;
   color: #4070f4;
+  transform: translateY(-2px); /* Subtle lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
@@ -375,11 +408,12 @@ section .title span::after {
   width: 400px;
   object-fit: cover;
   border-radius: 50%;
-  transition: transform 0.3s ease-in-out; /* Added for smooth scaling */
+  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
 }
 
 .about .left img:hover {
-  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  transform: scale(1.05); /* Zoom out effect: image expands slightly */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
 }
 
 .about-details .right {
@@ -542,7 +576,7 @@ section .button button:hover {
 }
 
 .projects .boxes .box {
-  width: calc(100% / 3 - 20px); /* Keeping the square layout */
+  width: calc(100% / 3 - 20px);
   text-align: center;
   border-radius: 12px;
   padding: 20px;
@@ -550,12 +584,12 @@ section .button button:hover {
   cursor: default;
   transition: all 0.4s ease;
   background: #fff;
-  margin-bottom: 20px; /* Added margin for spacing between boxes */
+  margin-bottom: 20px;
 }
 
 .projects .boxes .box:hover {
-  transform: translateY(-8px); /* Subtle lift on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .projects .boxes .box .project-image {
@@ -564,8 +598,9 @@ section .button button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ensure image scaling doesn't break layout */
-  border-radius: 10px; /* Apply border-radius to container */
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out; /* Transition for the image container */
 }
 
 .projects .boxes .box .project-image img {
@@ -573,11 +608,11 @@ section .button button:hover {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out; /* Smooth transition for image zoom */
 }
 
-.projects .boxes .box:hover .project-image img {
-  transform: scale(1.1); /* Zoom effect on image hover */
+.projects .boxes .box:hover .project-image {
+  transform: scale(1.1); /* Zoom out effect for the image container */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Subtle shadow for the image container */
 }
 
 .projects .topic {
@@ -652,57 +687,6 @@ section .button button:hover {
   color: #4070f4;
   border-color: #4070f4;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Tablet (iPad Pro, iPad Air) */
-@media (max-width: 1024px) {
-  .projects .boxes {
-    justify-content: center;
-  }
-
-  .projects .boxes .box {
-    width: calc(50% - 15px);
-    padding: 18px;
-  }
-
-  .projects .boxes .box .project-image {
-    height: 130px;
-  }
-
-  .projects .topic {
-    font-size: 16px;
-  }
-
-  .projects .buttons a {
-    font-size: 14px;
-    padding: 6px 14px;
-  }
-}
-
-/* Mobile (Phones) */
-@media (max-width: 768px) {
-  .projects .boxes {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .projects .boxes .box {
-    width: 90%;
-    padding: 15px;
-  }
-
-  .projects .boxes .box .project-image {
-    height: 120px;
-  }
-
-  .projects .topic {
-    font-size: 14px;
-  }
-
-  .projects .buttons a {
-    font-size: 12px;
-    padding: 5px 12px;
-  }
 }
 
 /* Contact Section */
