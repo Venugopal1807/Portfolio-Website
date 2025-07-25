@@ -45,9 +45,9 @@ navLinks.forEach((link) => {
   link.addEventListener("click", hideNavMenu);
 });
 
-// Dynamic Job Title Sliding Effect
+// Dynamic Job Title Typing Effect
 const dynamicJobTitle = document.querySelector(".job-title-dynamic");
-const staticJobTitle = document.querySelector(".job-title-static");
+const staticJobTitle = document.querySelector(".job-title-static"); // Still targeting the static span for hiding
 
 const jobTitles = [
   "Software Developer",
@@ -56,28 +56,42 @@ const jobTitles = [
   "Python Developer",
 ];
 let titleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-function slideJobTitle() {
-  staticJobTitle.style.display = "none"; // Hide the static title
-  dynamicJobTitle.style.transform = "translateX(100%)"; // Start off-screen to the right
-  dynamicJobTitle.style.opacity = "0"; // Start invisible
+function typeWriterEffect() {
+  // Hide the static job title once the dynamic effect starts
+  if (staticJobTitle.style.display !== "none") {
+    staticJobTitle.style.display = "none";
+  }
 
-  setTimeout(() => {
-    dynamicJobTitle.textContent = jobTitles[titleIndex];
-    dynamicJobTitle.style.transform = "translateX(0)"; // Slide in
-    dynamicJobTitle.style.opacity = "1"; // Fade in
+  const currentTitle = jobTitles[titleIndex];
 
-    setTimeout(() => {
-      dynamicJobTitle.style.transform = "translateX(-100%)"; // Slide out to the left
-      dynamicJobTitle.style.opacity = "0"; // Fade out
-      titleIndex = (titleIndex + 1) % jobTitles.length; // Move to next title
+  if (isDeleting) {
+    dynamicJobTitle.textContent = currentTitle.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    dynamicJobTitle.textContent = currentTitle.substring(0, charIndex + 1);
+    charIndex++;
+  }
 
-      setTimeout(slideJobTitle, 500); // Wait for slide out to complete before next slide in
-    }, 2000); // Display time for each title
-  }, 500); // Delay before sliding in (matches slide out transition duration)
+  // If typing is complete
+  if (!isDeleting && charIndex === currentTitle.length) {
+    setTimeout(() => (isDeleting = true), 1500); // Pause, then start deleting
+  }
+  // If deleting is complete
+  else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    titleIndex = (titleIndex + 1) % jobTitles.length; // Move to the next title
+    setTimeout(typeWriterEffect, 500); // Short pause before typing next title
+    return; // Exit to prevent immediate re-run
+  }
+
+  const typingSpeed = isDeleting ? 70 : 150; // Faster deleting, slower typing
+  setTimeout(typeWriterEffect, typingSpeed);
 }
 
-// Initial call to start the sliding effect after a short delay
+// Initial call to start the typing effect after a short delay
 window.addEventListener("load", () => {
-  setTimeout(slideJobTitle, 500);
+  setTimeout(typeWriterEffect, 500);
 });

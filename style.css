@@ -28,26 +28,73 @@
   background: #4070f4;
 }
 
+/* --- General Hover Effects --- */
+
 /* General Link Hover Effect */
 a {
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 a:hover {
-  transform: translateY(-2px); /* Slight lift effect */
-  color: #3057d5; /* Slightly darker blue on hover for general links */
+  transform: translateY(-2px); /* Subtle lift */
+  color: #3057d5; /* Slightly darker blue */
 }
 
-/* Specific overrides for button links to maintain their distinct hover */
-section .button button a:hover {
-  color: #4070f4; /* Override general link hover for buttons */
-  transform: none; /* No lift for button links */
+/* Button Hover Effect (General Styling) */
+.button button {
+  transition: all 0.3s ease; /* Ensure all button changes are smooth */
 }
-.live-btn:hover,
-.github-btn:hover,
+
+.button button:hover {
+  transform: translateY(-2px); /* Lift button on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Overrides for specific button groups to ensure they maintain their distinct styles */
+.home .button button:hover {
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+
+section .button button:hover {
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+
+.projects .buttons a.live-btn:hover {
+  background-color: #fff;
+  color: #4070f4;
+  border-color: #4070f4;
+  transform: none; /* Prevent lift if already styled */
+}
+
+.projects .buttons a.github-btn:hover {
+  background-color: #fff;
+  color: #0e2431;
+  border-color: #0e2431;
+  transform: none; /* Prevent lift if already styled */
+}
+
+.contact-button button:hover {
+  background: #fff;
+  color: #4070f4;
+  border-color: #4070f4;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); /* Lift button on hover */
+}
+
 .more-projects a:hover {
-  transform: none; /* No lift for project buttons */
+  background: #fff;
+  color: #4070f4;
+  border-color: #4070f4;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); /* Lift link on hover */
 }
+
+/* --- End General Hover Effects --- */
+
 /* navbar styling */
 nav {
   position: fixed;
@@ -188,38 +235,8 @@ nav.sticky .menu-btn {
   font-size: 40px;
   margin: 5px 0;
   color: #4070f4;
-  min-height: 48px; /* Added to prevent layout shift during typing effect */
-  display: flex; /* Allow inline elements to sit side by side */
-  overflow: hidden; /* Hide overflowing text during slide */
-}
-
-/* Sliding Text effect styles */
-.job-title-static {
-  white-space: nowrap; /* Keep text on one line */
-}
-
-.job-title-dynamic {
-  display: inline-block; /* Essential for transform */
-  white-space: nowrap; /* Keep text on one line */
-  transform: translateX(0); /* Initial state for animation */
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth sliding transition */
-  opacity: 1; /* Initial opacity for animation */
-}
-
-/* Social Icons */
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons a {
-  font-size: 30px;
-  color: #4070f4;
-  margin-right: 15px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
+  min-height: 48px; /* Maintain height during text changes */
+  display: flex; /* Adjust for text alignment with typing effect */
 }
 
 /* Profile Picture Zoom Out Effect (Container expands) */
@@ -261,14 +278,6 @@ nav.sticky .menu-btn {
   cursor: pointer;
   border: 2px solid transparent;
   transition: all 0.4s ease;
-}
-
-.home .button button:hover {
-  border-color: #4070f4;
-  background-color: #fff;
-  color: #4070f4;
-  transform: translateY(-2px); /* Subtle lift on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
@@ -449,12 +458,6 @@ section .button button {
   transition: all 0.4s ease;
 }
 
-section .button button:hover {
-  border-color: #4070f4;
-  background-color: #fff;
-  color: #4070f4;
-}
-
 /* My Skills CSS */
 .skills {
   background: #f0f8ff;
@@ -485,11 +488,12 @@ section .button button:hover {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
 }
 
 .skill-category:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 .skill-category h3 {
@@ -519,12 +523,13 @@ section .button button:hover {
   font-size: 14px;
   font-weight: bold;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, background 0.3s;
+  transition: transform 0.3s ease-in-out, background 0.3s, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
 }
 
 .box:hover {
   transform: scale(1.1);
   background: #3057d5;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 /* Tablet (iPad Pro, iPad Air, iPad Mini) */
@@ -600,7 +605,7 @@ section .button button:hover {
   justify-content: center;
   overflow: hidden;
   border-radius: 10px;
-  transition: all 0.3s ease-in-out; /* Transition for the image container */
+  transition: all 0.3s ease-in-out;
 }
 
 .projects .boxes .box .project-image img {
@@ -611,8 +616,8 @@ section .button button:hover {
 }
 
 .projects .boxes .box:hover .project-image {
-  transform: scale(1.1); /* Zoom out effect for the image container */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Subtle shadow for the image container */
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
 .projects .topic {
@@ -645,22 +650,10 @@ section .button button:hover {
   border: 2px solid transparent;
 }
 
-.live-btn:hover {
-  background-color: #fff;
-  color: #4070f4;
-  border-color: #4070f4;
-}
-
 .github-btn {
   background: #0e2431;
   color: #fff;
   border: 2px solid transparent;
-}
-
-.github-btn:hover {
-  background-color: #fff;
-  color: #0e2431;
-  border-color: #0e2431;
 }
 
 .more-projects {
@@ -680,13 +673,6 @@ section .button button:hover {
   transition: all 0.4s ease-in-out;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
   border: 2px solid transparent;
-}
-
-.more-projects a:hover {
-  background: #fff;
-  color: #4070f4;
-  border-color: #4070f4;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Section */
@@ -743,13 +729,6 @@ section .button button:hover {
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-}
-
-.contact-button button:hover {
-  background: #fff;
-  color: #4070f4;
-  border-color: #4070f4;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
