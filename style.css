@@ -196,7 +196,7 @@ nav.sticky .menu-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease-in-out; /* Added for smooth scaling */
+  transition: transform 0.3s ease-in-out; /* Added for smooth scaling of the container */
 }
 
 .profile-pic-container img {
@@ -254,23 +254,16 @@ nav.sticky .menu-btn {
   }
 
   .profile-pic-container {
-    /* Changed from .profile-pic to .profile-pic-container */
-    order: -1; /* Moves the profile picture to the top */
+    order: -1;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-  }
-
-  .profile-pic-container {
-    /* Changed from .profile-pic to .profile-pic-container */
     width: 400px;
     height: 400px;
-    border-radius: 50%;
-    object-fit: cover;
   }
 
   .home .text {
-    order: 1; /* Ensures text appears after the profile pic */
+    order: 1;
   }
 
   .home .text-two {
@@ -301,7 +294,6 @@ nav.sticky .menu-btn {
   }
 
   .profile-pic-container {
-    /* Changed from .profile-pic to .profile-pic-container */
     height: 250px;
     width: 250px;
     margin-top: 30px;
@@ -326,8 +318,6 @@ nav.sticky .menu-btn {
 }
 
 /* About Section Styling */
-/* Those Elements Where We Have Apply Same CSS,
-  I'm Selecting Directly 'Section Tag' and 'Class'  */
 section {
   padding-top: 40px;
 }
@@ -511,7 +501,6 @@ section .button button:hover {
   .skill-category {
     width: 48%;
     padding: 12px;
-    /* margin-bottom: 15px; */
   }
   .skills .skills-details {
     display: flex;
@@ -655,13 +644,13 @@ section .button button:hover {
   text-decoration: none;
   transition: all 0.4s ease-in-out;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  border: 2px solid transparent; /* ✅ Fix: Add border in default state */
+  border: 2px solid transparent;
 }
 
 .more-projects a:hover {
   background: #fff;
   color: #4070f4;
-  border-color: #4070f4; /* Only change color, not size */
+  border-color: #4070f4;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -672,12 +661,12 @@ section .button button:hover {
   }
 
   .projects .boxes .box {
-    width: calc(50% - 15px); /* Two cards per row */
+    width: calc(50% - 15px);
     padding: 18px;
   }
 
   .projects .boxes .box .project-image {
-    height: 130px; /* Reduce image size */
+    height: 130px;
   }
 
   .projects .topic {
@@ -698,12 +687,12 @@ section .button button:hover {
   }
 
   .projects .boxes .box {
-    width: 90%; /* Single column layout */
+    width: 90%;
     padding: 15px;
   }
 
   .projects .boxes .box .project-image {
-    height: 120px; /* Reduce image size further */
+    height: 120px;
   }
 
   .projects .topic {
@@ -853,11 +842,6 @@ footer .text span a:hover {
     width: 90%;
     margin: 40px 0;
   }
-
-  /* .services .boxes .box {
-    margin: 20px 0;
-    width: calc(100% / 2 - 20px);
-  } */
 }
 
 @media (max-width: 900px) {
@@ -909,34 +893,9 @@ footer .text span a:hover {
   .navbar .menu .cancel-btn {
     display: block;
   }
-
-  /* .home .text-two {
-    font-size: 65px;
-  }
-
-  .home .text-three {
-    font-size: 35px;
-  } */
-
-  /* .services .boxes .box {
-    margin: 20px 0;
-    width: 100%;
-  } */
-
-  /* .contact .text {
-    width: 100%;
-  } */
 }
 
 @media (max-width: 500px) {
-  /* .home .text-two {
-    font-size: 55px;
-  }
-
-  .home .text-three {
-    font-size: 33px;
-  } */
-
   .skills-details .boxes .per {
     font-size: 50px;
     color: #4070f4;

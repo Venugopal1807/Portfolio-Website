@@ -75,7 +75,7 @@ function typeWriterEffect() {
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     titleIndex = (titleIndex + 1) % jobTitles.length;
-    staticJobTitle.style.display = "inline"; // Show static title when a full dynamic cycle completes (optional, can be kept hidden)
+    // staticJobTitle.style.display = "inline"; // Uncomment if you want the static title to reappear after a full cycle
   }
 
   const typingSpeed = isDeleting ? 70 : 150; // Faster deleting, slower typing
