@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <title>Responsive Portfolio Website HTML CSS| CodingNepal</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Fontawesome CDN Link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -14,11 +12,9 @@
   </head>
 
   <body>
-    <!-- Move to up button -->
     <div class="scroll-button">
       <a href="#home"><i class="fas fa-arrow-up"></i></a>
     </div>
-    <!-- navgaition menu -->
     <nav>
       <div class="navbar">
         <div class="logo"><a href="#">Portfolio.</a></div>
@@ -49,16 +45,18 @@
       </div>
     </nav>
 
-    <!-- Home Section Start -->
     <section class="home" id="home">
       <div class="home-content">
-        <div class="profile-pic">
+        <div class="profile-pic-container">
           <img src="./Images/mypic2.jpg" alt="Profile Picture" />
         </div>
         <div class="text">
           <div class="text-one">Hello,</div>
           <div class="text-two">I'm Venu Gopal</div>
-          <div class="text-three">Software Developer</div>
+          <div class="text-three">
+            <span class="job-title-static">Software Developer</span>
+            <span class="job-title-dynamic"></span>
+          </div>
           <div class="social-icons">
             <a
               href="https://www.linkedin.com/in/venugopal-kunchepu"
@@ -79,7 +77,6 @@
       </div>
     </section>
 
-    <!-- About Section Start -->
     <section class="about" id="about">
       <div class="content">
         <div class="title"><span>About Me</span></div>
@@ -88,7 +85,6 @@
             <img src="images/newphototrim.png" alt="" />
           </div>
           <div class="right">
-            <!-- <div class="topic">Designing Is My Passion</div> -->
             <p>
               I am a dedicated and an aspiring software developer actively
               seeking my first opportunity in the tech industry. To gain
@@ -111,8 +107,6 @@
       </div>
     </section>
 
-    <!-- My Skill Section Start -->
-    <!-- Section Tag and Other Div will same where we need to put same CSS -->
     <section class="skills" id="skills">
       <div class="content">
         <div class="title"><span>My Skillset</span></div>
@@ -161,7 +155,6 @@
       </div>
     </section>
 
-    <!-- Projects Section Start -->
     <section class="projects" id="projects">
       <div class="content">
         <div class="title"><span>My Projects</span></div>
@@ -172,8 +165,14 @@
             </div>
             <div class="topic">Ai Resume Scanner</div>
             <div class="buttons">
-              <a href="https://ai-resume-scanner.streamlit.app/" class="live-btn">Live</a>
-              <a href="https://github.com/Venugopal1807/AI-Resume-Scanner" class="github-btn">GitHub</a>
+              <a href="https://ai-resume-scanner.streamlit.app/" class="live-btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/Venugopal1807/AI-Resume-Scanner"
+                class="github-btn"
+                >GitHub</a
+              >
             </div>
           </div>
 
@@ -183,8 +182,14 @@
             </div>
             <div class="topic">Chat Application</div>
             <div class="buttons">
-              <a href="https://python-chat-app-isfe.onrender.com/" class="live-btn">Live</a>
-              <a href="https://github.com/Venugopal1807/Python-Chat-App" class="github-btn">GitHub</a>
+              <a href="https://python-chat-app-isfe.onrender.com/" class="live-btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/Venugopal1807/Python-Chat-App"
+                class="github-btn"
+                >GitHub</a
+              >
             </div>
           </div>
 
@@ -194,8 +199,16 @@
             </div>
             <div class="topic">Admin Dashboard</div>
             <div class="buttons">
-              <a href="https://react-admin-dashboard-gamma-two.vercel.app/" class="live-btn">Live</a>
-              <a href="https://github.com/Venugopal1807/React-Admin-Dashboard" class="github-btn">GitHub</a>
+              <a
+                href="https://react-admin-dashboard-gamma-two.vercel.app/"
+                class="live-btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/Venugopal1807/React-Admin-Dashboard"
+                class="github-btn"
+                >GitHub</a
+              >
             </div>
           </div>
 
@@ -205,8 +218,14 @@
             </div>
             <div class="topic">Gemini Clone</div>
             <div class="buttons">
-              <a href="https://gemini-clone-ashy-three.vercel.app/" class="live-btn">Live</a>
-              <a href="https://github.com/Venugopal1807/Gemini-Clone" class="github-btn">GitHub</a>
+              <a href="https://gemini-clone-ashy-three.vercel.app/" class="live-btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/Venugopal1807/Gemini-Clone"
+                class="github-btn"
+                >GitHub</a
+              >
             </div>
           </div>
 
@@ -216,8 +235,14 @@
             </div>
             <div class="topic">Portfolio Website</div>
             <div class="buttons">
-              <a href="https://venugopalk.netlify.app/" class="live-btn">Live</a>
-              <a href="https://github.com/Venugopal1807/Portfolio-Website" class="github-btn">GitHub</a>
+              <a href="https://venugopalk.netlify.app/" class="live-btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/Venugopal1807/Portfolio-Website"
+                class="github-btn"
+                >GitHub</a
+              >
             </div>
           </div>
 
@@ -240,7 +265,6 @@
       </div>
     </section>
 
-    <!-- Contact Me section Start -->
     <section class="contact" id="contact">
       <div class="content">
         <div class="title"><span>Contact Me</span></div>
@@ -261,7 +285,6 @@
       </div>
     </section>
 
-    <!-- Footer Section Start -->
     <footer>
       <div class="text">
         <span

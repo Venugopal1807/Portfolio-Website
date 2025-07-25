@@ -168,6 +168,7 @@ nav.sticky .menu-btn {
   font-size: 40px;
   margin: 5px 0;
   color: #4070f4;
+  min-height: 48px; /* Added to prevent layout shift during typing effect */
 }
 
 /* Social Icons */
@@ -186,8 +187,8 @@ nav.sticky .menu-btn {
   transform: scale(1.2);
 }
 
-/* Profile Picture */
-.profile-pic {
+/* Profile Picture Hover Effect */
+.profile-pic-container {
   width: 450px;
   height: 450px;
   border-radius: 50%;
@@ -195,12 +196,22 @@ nav.sticky .menu-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease-in-out; /* Added for smooth scaling */
 }
 
-.profile-pic img {
+.profile-pic-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out; /* Added for smooth image scaling */
+}
+
+.profile-pic-container:hover {
+  transform: scale(1.05); /* Slightly enlarge the container */
+}
+
+.profile-pic-container:hover img {
+  transform: scale(1.1); /* Enlarge the image inside the container */
 }
 
 /* Button */
@@ -242,14 +253,16 @@ nav.sticky .menu-btn {
     justify-content: flex-start;
   }
 
-  .profile-pic {
+  .profile-pic-container {
+    /* Changed from .profile-pic to .profile-pic-container */
     order: -1; /* Moves the profile picture to the top */
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
   }
 
-  .profile-pic {
+  .profile-pic-container {
+    /* Changed from .profile-pic to .profile-pic-container */
     width: 400px;
     height: 400px;
     border-radius: 50%;
@@ -287,7 +300,8 @@ nav.sticky .menu-btn {
     text-align: center;
   }
 
-  .profile-pic {
+  .profile-pic-container {
+    /* Changed from .profile-pic to .profile-pic-container */
     height: 250px;
     width: 250px;
     margin-top: 30px;
@@ -313,7 +327,7 @@ nav.sticky .menu-btn {
 
 /* About Section Styling */
 /* Those Elements Where We Have Apply Same CSS,
- I'm Selecting Directly 'Section Tag' and 'Class'  */
+  I'm Selecting Directly 'Section Tag' and 'Class'  */
 section {
   padding-top: 40px;
 }
@@ -371,6 +385,11 @@ section .title span::after {
   width: 400px;
   object-fit: cover;
   border-radius: 50%;
+  transition: transform 0.3s ease-in-out; /* Added for smooth scaling */
+}
+
+.about .left img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
 }
 
 .about-details .right {
@@ -542,6 +561,12 @@ section .button button:hover {
   cursor: default;
   transition: all 0.4s ease;
   background: #fff;
+  margin-bottom: 20px; /* Added margin for spacing between boxes */
+}
+
+.projects .boxes .box:hover {
+  transform: translateY(-8px); /* Subtle lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .projects .boxes .box .project-image {
@@ -550,6 +575,8 @@ section .button button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Ensure image scaling doesn't break layout */
+  border-radius: 10px; /* Apply border-radius to container */
 }
 
 .projects .boxes .box .project-image img {
@@ -557,6 +584,11 @@ section .button button:hover {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for image zoom */
+}
+
+.projects .boxes .box:hover .project-image img {
+  transform: scale(1.1); /* Zoom effect on image hover */
 }
 
 .projects .topic {
