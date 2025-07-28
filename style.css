@@ -648,6 +648,14 @@ section .button button {
   margin: 10px 0;
 }
 
+.projects .boxes .box .project-description {
+  font-size: 15px;
+  color: #333;
+  margin: 10px 0 15px 0;
+  text-align: center;
+  line-height: 1.5; 
+}
+
 .projects .buttons {
   display: flex;
   justify-content: space-between;
