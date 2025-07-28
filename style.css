@@ -30,70 +30,75 @@
 
 /* --- General Hover Effects --- */
 
-/* General Link Hover Effect */
+/* General Link Hover Effect (for text links, not buttons) */
 a {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-a:hover {
+/* Ensure default link hover doesn't conflict with button hovers */
+a:hover:not(.button a):not(.more-projects a):not(.projects .buttons a):not(.navbar .media-icons a) {
   transform: translateY(-2px); /* Subtle lift */
   color: #3057d5; /* Slightly darker blue */
 }
 
-/* Unified Button Hover Effects */
-/* This rule applies consistent transform and shadow to most buttons */
+
+/* Unified Button Base Transition */
+/* This ensures ALL button-like elements have a smooth transition */
 .home .button button,
 section .button button,
-.projects .buttons a, /* Target project live/github buttons */
+.projects .buttons a,
 .contact-button button,
 .more-projects a {
-  transition: all 0.3s ease; /* Ensure all button changes are smooth */
+  transition: all 0.3s ease;
 }
 
-.home .button button:hover,
-section .button button:hover,
-.contact-button button:hover,
-.more-projects a:hover {
-  transform: translateY(-2px); /* Lift button on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-}
-
-/* Specific button styles (override colors/backgrounds but inherit transform/shadow) */
+/* Specific Button Hover Effects (with lift and shadow integrated) */
 .home .button button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-color: #4070f4;
   background-color: #fff;
   color: #4070f4;
 }
 
 section .button button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-color: #4070f4;
   background-color: #fff;
   color: #4070f4;
 }
 
 .projects .buttons a.live-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   color: #4070f4;
   border-color: #4070f4;
 }
 
 .projects .buttons a.github-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   color: #0e2431;
   border-color: #0e2431;
 }
 
 .contact-button button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #4070f4;
   border-color: #4070f4;
 }
 
 .more-projects a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for this one */
   background: #fff;
   color: #4070f4;
   border-color: #4070f4;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for this one */
 }
 
 /* --- End General Hover Effects --- */
@@ -166,7 +171,7 @@ nav.sticky .menu a:hover {
   color: #4070f4;
   font-size: 24px; /* Increased size */
   margin: 0 10px; /* Increased gap */
-  transition: transform 0.3s ease; /* Smooth transition for scale */
+  transition: transform 0.3s ease; /* Smooth transition for scale and lift */
 }
 
 .navbar .media-icons a:hover {
@@ -257,7 +262,7 @@ nav.sticky .menu-btn {
   font-size: 40px; /* Increased size */
   color: #4070f4;
   margin-right: 20px; /* Increased gap */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for scale */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scale and lift */
 }
 
 .social-icons a:hover {
@@ -287,7 +292,7 @@ nav.sticky .menu-btn {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
 }
 
-/* Button */
+/* Home Section Button */
 .home .button {
   margin-top: 14px;
 }
@@ -304,10 +309,14 @@ nav.sticky .menu-btn {
   border: 2px solid transparent;
 }
 
-/* Responsive Design */
+/* --- Responsive Design --- */
 
-/* Tablet (iPad Pro, iPad Air, iPad Mini) */
+/* For Laptops/Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
+  section .content {
+    width: 85%; /* General content width for tablets */
+  }
+
   .home {
     height: 80vh;
     padding: 20px 0;
@@ -333,236 +342,56 @@ nav.sticky .menu-btn {
   }
 
   .home .text-two {
-    font-size: 50px;
+    font-size: 50px; /* Adjusted font size for tablets */
   }
 
   .home .text-three {
-    font-size: 28px;
-  }
-
-  .social-icons {
-    margin-top: 10px;
+    font-size: 28px; /* Adjusted font size for tablets */
   }
 
   .social-icons a {
     font-size: 30px; /* Adjusted size for tablets */
-  }
-}
-
-/* Mobile (Phones) */
-@media (max-width: 768px) {
-  .home {
-    height: 80vh;
-  }
-  .home .home-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-pic-container {
-    height: 250px;
-    width: 250px;
-    margin-top: 30px;
-  }
-
-  .home .text-two {
-    font-size: 35px;
-  }
-
-  .home .text-three {
-    font-size: 15px;
-  }
-
-  .social-icons a {
-    font-size: 25px; /* Adjusted size for mobile */
-    margin-right: 15px; /* Adjusted gap for mobile */
+    margin-right: 15px; /* Adjusted gap for tablets */
   }
 
   .home .button button {
-    font-size: 15px;
-    padding: 4px 10px;
+    font-size: 20px; /* Adjusted font size for tablets */
+    padding: 6px 14px; /* Adjusted padding for tablets */
   }
-}
 
-/* About Section Styling */
-section {
-  padding-top: 40px;
-}
+  /* About Section */
+  .about .about-details {
+    justify-content: center;
+    flex-direction: column;
+  }
 
-section .content {
-  width: 80%;
-  margin: 40px auto;
-  font-family: "Poppins", sans-serif;
-}
+  .about .about-details .left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
-.about .about-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .about .left img {
+    height: 350px; /* Adjusted image size for tablets */
+    width: 350px; /* Adjusted image size for tablets */
+  }
 
-section .title {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
+  .about-details .right {
+    width: 90%;
+    margin: 40px 0;
+  }
 
-section .title span {
-  color: #0e2431;
-  font-size: 30px;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 8px;
-}
+  section .button button {
+    font-size: 20px; /* Adjusted CV button font size for tablets */
+    padding: 6px 14px; /* Adjusted CV button padding for tablets */
+  }
 
-section .title span::before,
-section .title span::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: #4070f4;
-  left: 0;
-  bottom: 0;
-}
-
-section .title span::after {
-  bottom: -7px;
-  width: 70%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.about .about-details .left {
-  width: 45%;
-}
-
-.about .left img {
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
-}
-
-.about .left img:hover {
-  transform: scale(1.05); /* Zoom out effect: image expands slightly */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
-}
-
-.about-details .right {
-  width: 55%;
-}
-
-section .topic {
-  color: #0e2431;
-  font-size: 25px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.about-details .right p {
-  text-align: justify;
-  color: #0e2431;
-}
-
-section .button {
-  margin: 16px 0;
-}
-
-section .button button {
-  outline: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 25px;
-  font-weight: 400;
-  background: #4070f4;
-  color: #fff;
-  border: 2px solid transparent;
-  cursor: pointer;
-}
-
-/* My Skills CSS */
-.skills {
-  background: #f0f8ff;
-  padding: 40px 0;
-}
-
-.skills .content {
-  text-align: center;
-}
-
-.skills .title {
-  font-size: 28px;
-  font-weight: bold;
-  color: #0e2431;
-  margin-bottom: 40px;
-}
-
-.skills .skills-details {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.skill-category {
-  width: 30%;
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
-}
-
-.skill-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-}
-
-.skill-category h3 {
-  font-size: 20px;
-  color: #0e2431;
-  margin-bottom: 5px;
-}
-
-.skill-category p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.box {
-  padding: 8px 12px;
-  background: #4070f4;
-  margin: 5px;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, background 0.3s, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
-}
-
-.box:hover {
-  transform: scale(1.1);
-  background: #3057d5;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-}
-
-/* Tablet (iPad Pro, iPad Air, iPad Mini) */
-@media (max-width: 1024px) {
+  /* Skills Section */
   .skills .title {
     font-size: 24px;
   }
   .skill-category {
-    width: 48%;
+    width: 48%; /* Two columns for skills */
     padding: 12px;
   }
   .skills .skills-details {
@@ -575,281 +404,50 @@ section .button button {
     font-size: 12px;
     padding: 6px 10px;
   }
-}
 
-/* Mobile (Phones) */
-@media (max-width: 768px) {
-  .skills .title {
-    font-size: 22px;
+  /* Projects Section */
+  .projects .boxes {
+    justify-content: center;
+    gap: 20px; /* Add gap between project boxes */
   }
-  .skills .skills-details {
-    flex-direction: column;
-    align-items: center;
+  .projects .boxes .box {
+    width: calc(50% - 10px); /* Two cards per row with gap */
+    padding: 18px;
   }
-  .skill-category {
-    width: 90%;
-    margin-bottom: 15px;
-    padding: 10px;
+  .projects .boxes .box .project-image {
+    height: 130px; /* Reduce image size */
   }
-  .box {
-    font-size: 10px;
-    padding: 5px 8px;
+  .projects .topic {
+    font-size: 16px;
   }
-}
+  .projects .boxes .box .project-description {
+    font-size: 14px; /* Adjusted description font size for tablets */
+  }
+  .projects .buttons a {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
 
-/* Projects Section */
-.projects .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.projects .boxes .box {
-  width: calc(100% / 3 - 20px);
-  text-align: center;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  cursor: default;
-  transition: all 0.4s ease;
-  background: #fff;
-  margin-bottom: 20px;
-}
-
-.projects .boxes .box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.projects .boxes .box .project-image {
-  width: 100%;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-}
-
-.projects .boxes .box .project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.projects .boxes .box:hover .project-image {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-}
-
-.projects .topic {
-  font-size: 18px;
-  font-weight: bold;
-  color: #0e2431;
-  margin: 10px 0;
-}
-
-.projects .boxes .box .project-description {
-  font-size: 15px;
-  color: #333; /* Ensuring visible color */
-  margin: 10px 0 15px 0;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.projects .buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.projects .buttons a {
-  text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  text-align: center;
-  width: 45%;
-}
-
-.live-btn {
-  background: #4070f4;
-  color: #fff;
-  border: 2px solid transparent;
-}
-
-.github-btn {
-  background: #0e2431;
-  color: #fff;
-  border: 2px solid transparent;
-}
-
-.more-projects {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.more-projects a {
-  display: inline-block;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  background: #4070f4;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  border: 2px solid transparent;
-}
-
-/* Contact Section */
-.contact {
-  background: #f0f8ff;
-  padding: 50px 0;
-  text-align: center;
-}
-
-.contact .content {
-  width: 50%;
-  margin: auto;
-}
-
-/* Contact Form */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-}
-
-.input-box input,
-.input-box textarea {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #4070f4;
-  border-radius: 6px;
-  font-size: 16px;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-.input-box input:focus,
-.input-box textarea:focus {
-  border-color: #3057d5;
-}
-
-/* Textarea */
-.input-box textarea {
-  resize: none;
-  height: 120px;
-}
-
-/* Send Button */
-.contact-button button {
-  width: 100%;
-  padding: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  background: #4070f4;
-  color: #fff;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
+  /* Contact Section */
   .contact .content {
     width: 70%;
   }
+  .contact-button button {
+    font-size: 16px; /* Adjusted contact button font size */
+    padding: 10px 20px; /* Adjusted contact button padding */
+  }
 }
 
+/* For Mobile Phones (max-width: 768px) */
 @media (max-width: 768px) {
-  .contact .content {
-    width: 90%;
-  }
-}
-
-/* Footer CSS */
-footer {
-  background: #4070f4;
-  padding: 15px 0;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-}
-
-footer .text span {
-  font-size: 17px;
-  font-weight: 400;
-  color: #fff;
-}
-
-footer .text span a {
-  font-weight: 500;
-  color: #fff;
-}
-
-footer .text span a:hover {
-  text-decoration: underline;
-}
-
-/* Scroll TO Top Button CSS */
-.scroll-button a {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: #fff;
-  background: #4070f4;
-  padding: 7px 12px;
-  font-size: 18px;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.15);
-  display: none;
-  margin-bottom: 40px;
-}
-
-/* Responsive Media Query */
-@media (max-width: 1190px) {
   section .content {
-    width: 85%;
-  }
-}
-
-@media (max-width: 1024px) {
-  .about .about-details {
-    justify-content: center;
-    flex-direction: column;
+    width: 90%; /* General content width for mobiles */
   }
 
-  .about .about-details .left {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .about-details .right {
-    width: 90%;
-    margin: 40px 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .about .left img {
-    height: 350px;
-    width: 350px;
-  }
-}
-
-@media (max-width: 750px) {
+  /* Navbar adjustments for mobile */
   nav .navbar {
     width: 90%;
   }
-
   nav .navbar .menu {
     position: fixed;
     left: -100%;
@@ -863,35 +461,118 @@ footer .text span a:hover {
     align-items: center;
     transition: all 0.5s ease;
   }
-
   .navbar.active .menu {
     left: 0;
   }
-
   nav .navbar .menu a {
     font-size: 23px;
     display: block;
     color: #fff;
     margin: 15px 0;
   }
-
   nav.sticky .menu a:hover {
     color: #4070f4;
   }
-
   nav .navbar .media-icons {
-    display: none;
+    display: none; /* Hide social icons in mobile nav */
   }
-
   nav .menu-btn,
   .navbar .menu .cancel-btn {
     display: block;
   }
-}
 
-@media (max-width: 500px) {
-  .skills-details .boxes .per {
-    font-size: 50px;
-    color: #4070f4;
+  .home {
+    height: 80vh;
+  }
+  .home .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic-container {
+    height: 250px; /* Adjusted size for mobile */
+    width: 250px; /* Adjusted size for mobile */
+    margin-top: 30px;
+  }
+
+  .home .text-two {
+    font-size: 35px; /* Adjusted font size for mobile */
+  }
+
+  .home .text-three {
+    font-size: 15px; /* Adjusted font size for mobile */
+    min-height: 24px; /* Adjust min-height for smaller font */
+  }
+
+  .social-icons a {
+    font-size: 25px; /* Adjusted size for mobile */
+    margin-right: 15px; /* Adjusted gap for mobile */
+  }
+
+  .home .button button {
+    font-size: 15px; /* Adjusted font size for mobile */
+    padding: 4px 10px; /* Adjusted padding for mobile */
+  }
+
+  /* About Section */
+  .about .left img {
+    height: 280px; /* Further adjusted image size for mobile */
+    width: 280px; /* Further adjusted image size for mobile */
+  }
+
+  section .button button {
+    font-size: 15px; /* Adjusted CV button font size for mobile */
+    padding: 4px 10px; /* Adjusted CV button padding for mobile */
+  }
+
+  /* Skills Section */
+  .skills .title {
+    font-size: 22px;
+  }
+  .skills .skills-details {
+    flex-direction: column; /* Single column for skills */
+    align-items: center;
+  }
+  .skill-category {
+    width: 90%; /* Full width for skills */
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  .box {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+
+  /* Projects Section */
+  .projects .boxes {
+    flex-direction: column; /* Single column for projects */
+    align-items: center;
+  }
+  .projects .boxes .box {
+    width: 90%; /* Full width for projects */
+    padding: 15px;
+  }
+  .projects .boxes .box .project-image {
+    height: 120px; /* Reduce image size further */
+  }
+  .projects .topic {
+    font-size: 14px;
+  }
+  .projects .boxes .box .project-description {
+    font-size: 13px; /* Further adjusted description font size for mobile */
+    margin: 8px 0 12px 0; /* Adjusted margins for mobile */
+  }
+  .projects .buttons a {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  /* Contact Section */
+  .contact .content {
+    width: 90%;
+  }
+  .contact-button button {
+    font-size: 14px; /* Adjusted contact button font size */
+    padding: 8px 15px; /* Adjusted contact button padding */
   }
 }
