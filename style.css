@@ -35,23 +35,20 @@ a {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Exclude specific buttons/icons from general 'a:hover' to prevent conflicts */
 a:hover:not(.button a):not(.more-projects a):not(.projects .buttons a):not(.navbar .media-icons a) {
-  transform: translateY(-2px); /* Subtle lift */
-  color: #3057d5; /* Slightly darker blue */
+  transform: translateY(-2px); 
+  color: #3057d5; 
 }
 
-/* Unified Button Base Transition */
-/* This ensures ALL button-like elements have a smooth transition */
+
 .home .button button,
 section .button button,
 .projects .buttons a,
 .contact-button button,
 .more-projects a {
-  transition: all 0.3s ease; /* Apply transition to all properties */
+  transition: all 0.3s ease;
 }
 
-/* Specific Button Hover Effects (with integrated lift and shadow) */
 .home .button button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -94,7 +91,7 @@ section .button button:hover {
 
 .more-projects a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
   background: #fff;
   color: #4070f4;
   border-color: #4070f4;
@@ -169,12 +166,12 @@ nav.sticky .menu a:hover {
 .navbar .media-icons a {
   color: #4070f4;
   font-size: 24px;
-  margin: 0 10px;
-  transition: transform 0.3s ease;
+  margin: 0 10px; 
+  transition: transform 0.3s ease; 
 }
 
 .navbar .media-icons a:hover {
-  transform: translateY(-2px) scale(1.2); /* Lift and scale on hover */
+  transform: translateY(-2px) scale(1.2); 
 }
 
 nav.sticky .media-icons a {
@@ -248,8 +245,8 @@ nav.sticky .menu-btn {
   font-size: 40px;
   margin: 5px 0;
   color: #4070f4;
-  min-height: 48px; /* Maintain height during text changes */
-  display: flex; /* Adjust for text alignment with typing effect */
+  min-height: 48px;
+  display: flex; 
 }
 
 /* Social Icons in Home Section */
@@ -258,14 +255,14 @@ nav.sticky .menu-btn {
 }
 
 .social-icons a {
-  font-size: 40px;
+  font-size: 40px; 
   color: #4070f4;
-  margin-right: 20px;
-  transition: transform 0.3s ease-in-out;
+  margin-right: 20px; 
+  transition: transform 0.3s ease-in-out; 
 }
 
 .social-icons a:hover {
-  transform: translateY(-2px) scale(1.2); /* Lift and scale on hover */
+  transform: translateY(-2px) scale(1.2); 
 }
 
 /* Profile Picture Zoom Out Effect (Container expands) */
@@ -273,16 +270,22 @@ nav.sticky .menu-btn {
   width: 450px;
   height: 450px;
   border-radius: 50%;
-  overflow: hidden;
+  overflow: hidden; 
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
+}
+
+.profile-pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .profile-pic-container:hover {
-  transform: scale(1.05); /* Zoom out effect: container expands slightly */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
 }
 
 /* Home Section Button */
@@ -302,12 +305,12 @@ nav.sticky .menu-btn {
   border: 2px solid transparent;
 }
 
-/* Responsive Design */
+/* --- Responsive Design --- */
 
 /* For Laptops/Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
   section .content {
-    width: 85%; /* General content width for tablets */
+    width: 85%; 
   }
 
   .home {
@@ -335,21 +338,21 @@ nav.sticky .menu-btn {
   }
 
   .home .text-two {
-    font-size: 50px; /* Adjusted font size for tablets */
+    font-size: 50px; 
   }
 
   .home .text-three {
-    font-size: 28px; /* Adjusted font size for tablets */
+    font-size: 28px; 
   }
 
   .social-icons a {
-    font-size: 30px; /* Adjusted size for tablets */
-    margin-right: 15px; /* Adjusted gap for tablets */
+    font-size: 30px; 
+    margin-right: 15px; 
   }
 
   .home .button button {
-    font-size: 20px; /* Adjusted font size for tablets */
-    padding: 6px 14px; /* Adjusted padding for tablets */
+    font-size: 20px; 
+    padding: 6px 14px; 
   }
 
   /* About Section */
@@ -365,8 +368,8 @@ nav.sticky .menu-btn {
   }
 
   .about .left img {
-    height: 350px; /* Adjusted image size for tablets */
-    width: 350px; /* Adjusted image size for tablets */
+    height: 350px;
+    width: 350px;
   }
 
   .about-details .right {
@@ -375,8 +378,8 @@ nav.sticky .menu-btn {
   }
 
   section .button button {
-    font-size: 20px; /* Adjusted CV button font size for tablets */
-    padding: 6px 14px; /* Adjusted CV button padding for tablets */
+    font-size: 20px; 
+    padding: 6px 14px; 
   }
 
   /* Skills Section */
@@ -384,14 +387,14 @@ nav.sticky .menu-btn {
     font-size: 24px;
   }
   .skill-category {
-    width: 48%; /* Two columns for skills */
+    width: 48%; 
     padding: 12px;
   }
   .skills .skills-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Add gap between skill categories */
+    gap: 20px;
   }
   .box {
     font-size: 12px;
@@ -401,34 +404,20 @@ nav.sticky .menu-btn {
   /* Projects Section */
   .projects .boxes {
     justify-content: center;
-    gap: 20px; /* Add gap between project boxes */
+    gap: 20px; 
   }
   .projects .boxes .box {
-    width: calc(50% - 10px); /* Two cards per row with gap */
+    width: calc(50% - 10px);
     padding: 18px;
-    height: 380px; /* Fixed height for rectangular shape and 3 lines */
-    display: flex; /* Enable flexbox for vertical alignment */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: space-between; /* Distribute space */
-    align-items: center; /* Center horizontally */
   }
   .projects .boxes .box .project-image {
-    height: 150px; /* Maintain image height, as box size is fixed */
+    height: 130px;
   }
   .projects .topic {
     font-size: 16px;
   }
   .projects .boxes .box .project-description {
-    font-size: 14px; /* Adjusted description font size for tablets */
-    margin: 8px 0 12px 0; /* Adjusted margins for tablets */
-    display: -webkit-box; /* Enable multiline truncation */
-    -webkit-line-clamp: 3; /* Limit to 3 lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden; /* Hide overflowing text */
-    text-overflow: ellipsis; /* Add ellipsis for truncated text */
-  }
-  .projects .buttons {
-    margin-top: auto; /* Push buttons to the bottom */
+    font-size: 14px; 
   }
   .projects .buttons a {
     font-size: 14px;
@@ -440,15 +429,15 @@ nav.sticky .menu-btn {
     width: 70%;
   }
   .contact-button button {
-    font-size: 16px; /* Adjusted contact button font size */
-    padding: 10px 20px; /* Adjusted contact button padding */
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }
 
-/* For iPad Portrait (max-width: 768px, covers iPad Mini/Air portrait) */
+/* For Mobile Phones (max-width: 768px) */
 @media (max-width: 768px) {
   section .content {
-    width: 90%; /* General content width for mobiles/small tablets */
+    width: 90%; 
   }
 
   /* Navbar adjustments for mobile */
@@ -481,7 +470,7 @@ nav.sticky .menu-btn {
     color: #4070f4;
   }
   nav .navbar .media-icons {
-    display: none; /* Hide social icons in mobile nav */
+    display: none; 
   }
   nav .menu-btn,
   .navbar .menu .cancel-btn {
@@ -497,39 +486,39 @@ nav.sticky .menu-btn {
   }
 
   .profile-pic-container {
-    height: 250px; /* Adjusted size for mobile */
-    width: 250px; /* Adjusted size for mobile */
+    height: 250px; 
+    width: 250px; 
     margin-top: 30px;
   }
 
   .home .text-two {
-    font-size: 35px; /* Adjusted font size for mobile */
+    font-size: 35px;
   }
 
   .home .text-three {
-    font-size: 15px; /* Adjusted font size for mobile */
-    min-height: 24px; /* Adjust min-height for smaller font */
+    font-size: 15px; 
+    min-height: 24px; 
   }
 
   .social-icons a {
-    font-size: 25px; /* Adjusted size for mobile */
-    margin-right: 15px; /* Adjusted gap for mobile */
+    font-size: 25px; 
+    margin-right: 15px; 
   }
 
   .home .button button {
-    font-size: 15px; /* Adjusted font size for mobile */
-    padding: 4px 10px; /* Adjusted padding for mobile */
+    font-size: 15px; 
+    padding: 4px 10px; 
   }
 
   /* About Section */
   .about .left img {
-    height: 280px; /* Further adjusted image size for mobile */
-    width: 280px; /* Further adjusted image size for mobile */
+    height: 280px; 
+    width: 280px; 
   }
 
   section .button button {
-    font-size: 15px; /* Adjusted CV button font size for mobile */
-    padding: 4px 10px; /* Adjusted CV button padding for mobile */
+    font-size: 15px;
+    padding: 4px 10px;
   }
 
   /* Skills Section */
@@ -537,11 +526,11 @@ nav.sticky .menu-btn {
     font-size: 22px;
   }
   .skills .skills-details {
-    flex-direction: column; /* Single column for skills */
+    flex-direction: column; 
     align-items: center;
   }
   .skill-category {
-    width: 90%; /* Full width for skills */
+    width: 90%; 
     margin-bottom: 15px;
     padding: 10px;
   }
@@ -552,23 +541,22 @@ nav.sticky .menu-btn {
 
   /* Projects Section */
   .projects .boxes {
-    flex-direction: column; /* Single column for projects */
+    flex-direction: column;
     align-items: center;
   }
   .projects .boxes .box {
-    width: 90%; /* Full width for projects */
+    width: 90%; 
     padding: 15px;
-    height: 360px; /* Adjusted fixed height for single column on mobile */
   }
   .projects .boxes .box .project-image {
-    height: 120px; /* Reduce image size further */
+    height: 120px; 
   }
   .projects .topic {
     font-size: 14px;
   }
   .projects .boxes .box .project-description {
-    font-size: 13px; /* Further adjusted description font size for mobile */
-    margin: 8px 0 12px 0; /* Adjusted margins for mobile */
+    font-size: 13px; 
+    margin: 8px 0 12px 0; 
   }
   .projects .buttons a {
     font-size: 12px;
@@ -580,26 +568,7 @@ nav.sticky .menu-btn {
     width: 90%;
   }
   .contact-button button {
-    font-size: 14px; /* Adjusted contact button font size */
-    padding: 8px 15px; /* Adjusted contact button padding */
-  }
-}
-
-/* Specific iPad Pro Landscape (1024px width range) - often covered by general 1024px but can be fine-tuned */
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* No specific overrides here, as the general 1024px media query covers this range effectively.
-     If specific differences are noticed on iPad Pro landscape, rules can be added here. */
-}
-
-/* Specific iPad Portrait (e.g., iPad Air, iPad Mini) */
-@media (max-width: 820px) and (orientation: portrait) {
-  /* This media query targets specific portrait tablet dimensions.
-     Adjustments for elements that might need to be larger than phone but smaller than laptop */
-  .projects .boxes .box {
-    width: calc(50% - 10px); /* Keep 2 columns if screen is wide enough in portrait */
-    height: 380px; /* Ensure consistency with 2-column layout */
-  }
-  .projects .boxes .box .project-description {
-    font-size: 14px;
+    font-size: 14px; 
+    padding: 8px 15px; 
   }
 }
