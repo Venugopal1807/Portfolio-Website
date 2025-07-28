@@ -53,8 +53,7 @@ section .button button,
 .home .button button:hover,
 section .button button:hover,
 .contact-button button:hover,
-.more-projects a:hover,
-.projects .buttons a:hover { /* Apply hover to all button-like links/buttons */
+.more-projects a:hover {
   transform: translateY(-2px); /* Lift button on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
 }
@@ -167,7 +166,11 @@ nav.sticky .menu a:hover {
   color: #4070f4;
   font-size: 24px; /* Increased size */
   margin: 0 10px; /* Increased gap */
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Smooth transition for scale */
+}
+
+.navbar .media-icons a:hover {
+  transform: translateY(-2px) scale(1.2); /* Lift and scale on hover */
 }
 
 nav.sticky .media-icons a {
@@ -254,11 +257,11 @@ nav.sticky .menu-btn {
   font-size: 40px; /* Increased size */
   color: #4070f4;
   margin-right: 20px; /* Increased gap */
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scale */
 }
 
 .social-icons a:hover {
-  transform: scale(1.2);
+  transform: translateY(-2px) scale(1.2); /* Lift and scale on hover */
 }
 
 /* Profile Picture Zoom Out Effect (Container expands) */
@@ -650,10 +653,10 @@ section .button button {
 
 .projects .boxes .box .project-description {
   font-size: 15px;
-  color: #333;
+  color: #333; /* Ensuring visible color */
   margin: 10px 0 15px 0;
   text-align: center;
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 .projects .buttons {
