@@ -35,12 +35,11 @@ a {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Ensure default link hover doesn't conflict with button hovers */
+/* Exclude specific buttons/icons from general 'a:hover' to prevent conflicts */
 a:hover:not(.button a):not(.more-projects a):not(.projects .buttons a):not(.navbar .media-icons a) {
   transform: translateY(-2px); /* Subtle lift */
   color: #3057d5; /* Slightly darker blue */
 }
-
 
 /* Unified Button Base Transition */
 /* This ensures ALL button-like elements have a smooth transition */
@@ -49,10 +48,10 @@ section .button button,
 .projects .buttons a,
 .contact-button button,
 .more-projects a {
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Apply transition to all properties */
 }
 
-/* Specific Button Hover Effects (with lift and shadow integrated) */
+/* Specific Button Hover Effects (with integrated lift and shadow) */
 .home .button button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -95,7 +94,7 @@ section .button button:hover {
 
 .more-projects a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for this one */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
   background: #fff;
   color: #4070f4;
   border-color: #4070f4;
@@ -169,9 +168,9 @@ nav.sticky .menu a:hover {
 /* Social Icons in Navbar */
 .navbar .media-icons a {
   color: #4070f4;
-  font-size: 24px; /* Increased size */
-  margin: 0 10px; /* Increased gap */
-  transition: transform 0.3s ease; /* Smooth transition for scale and lift */
+  font-size: 24px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
 }
 
 .navbar .media-icons a:hover {
@@ -259,10 +258,10 @@ nav.sticky .menu-btn {
 }
 
 .social-icons a {
-  font-size: 40px; /* Increased size */
+  font-size: 40px;
   color: #4070f4;
-  margin-right: 20px; /* Increased gap */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for scale and lift */
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
@@ -274,22 +273,16 @@ nav.sticky .menu-btn {
   width: 450px;
   height: 450px;
   border-radius: 50%;
-  overflow: hidden; /* Keep image inside boundary */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
-}
-
-.profile-pic-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  transition: all 0.3s ease-in-out;
 }
 
 .profile-pic-container:hover {
   transform: scale(1.05); /* Zoom out effect: container expands slightly */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Home Section Button */
@@ -309,7 +302,7 @@ nav.sticky .menu-btn {
   border: 2px solid transparent;
 }
 
-/* --- Responsive Design --- */
+/* Responsive Design */
 
 /* For Laptops/Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
@@ -398,7 +391,7 @@ nav.sticky .menu-btn {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Add gap between skill categories */
   }
   .box {
     font-size: 12px;
@@ -413,15 +406,29 @@ nav.sticky .menu-btn {
   .projects .boxes .box {
     width: calc(50% - 10px); /* Two cards per row with gap */
     padding: 18px;
+    height: 380px; /* Fixed height for rectangular shape and 3 lines */
+    display: flex; /* Enable flexbox for vertical alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute space */
+    align-items: center; /* Center horizontally */
   }
   .projects .boxes .box .project-image {
-    height: 130px; /* Reduce image size */
+    height: 150px; /* Maintain image height, as box size is fixed */
   }
   .projects .topic {
     font-size: 16px;
   }
   .projects .boxes .box .project-description {
     font-size: 14px; /* Adjusted description font size for tablets */
+    margin: 8px 0 12px 0; /* Adjusted margins for tablets */
+    display: -webkit-box; /* Enable multiline truncation */
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for truncated text */
+  }
+  .projects .buttons {
+    margin-top: auto; /* Push buttons to the bottom */
   }
   .projects .buttons a {
     font-size: 14px;
@@ -438,10 +445,10 @@ nav.sticky .menu-btn {
   }
 }
 
-/* For Mobile Phones (max-width: 768px) */
+/* For iPad Portrait (max-width: 768px, covers iPad Mini/Air portrait) */
 @media (max-width: 768px) {
   section .content {
-    width: 90%; /* General content width for mobiles */
+    width: 90%; /* General content width for mobiles/small tablets */
   }
 
   /* Navbar adjustments for mobile */
@@ -551,6 +558,7 @@ nav.sticky .menu-btn {
   .projects .boxes .box {
     width: 90%; /* Full width for projects */
     padding: 15px;
+    height: 360px; /* Adjusted fixed height for single column on mobile */
   }
   .projects .boxes .box .project-image {
     height: 120px; /* Reduce image size further */
@@ -574,5 +582,24 @@ nav.sticky .menu-btn {
   .contact-button button {
     font-size: 14px; /* Adjusted contact button font size */
     padding: 8px 15px; /* Adjusted contact button padding */
+  }
+}
+
+/* Specific iPad Pro Landscape (1024px width range) - often covered by general 1024px but can be fine-tuned */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* No specific overrides here, as the general 1024px media query covers this range effectively.
+     If specific differences are noticed on iPad Pro landscape, rules can be added here. */
+}
+
+/* Specific iPad Portrait (e.g., iPad Air, iPad Mini) */
+@media (max-width: 820px) and (orientation: portrait) {
+  /* This media query targets specific portrait tablet dimensions.
+     Adjustments for elements that might need to be larger than phone but smaller than laptop */
+  .projects .boxes .box {
+    width: calc(50% - 10px); /* Keep 2 columns if screen is wide enough in portrait */
+    height: 380px; /* Ensure consistency with 2-column layout */
+  }
+  .projects .boxes .box .project-description {
+    font-size: 14px;
   }
 }
