@@ -158,10 +158,12 @@ nav.sticky .menu a:hover {
   color: #0e2431;
 }
 
+/* Social Icons in Navbar */
 .navbar .media-icons a {
   color: #4070f4;
-  font-size: 18px;
-  margin: 0 6px;
+  font-size: 24px; /* Increased size */
+  margin: 0 10px; /* Increased gap */
+  transition: transform 0.3s ease;
 }
 
 nav.sticky .media-icons a {
@@ -237,6 +239,22 @@ nav.sticky .menu-btn {
   color: #4070f4;
   min-height: 48px; /* Maintain height during text changes */
   display: flex; /* Adjust for text alignment with typing effect */
+}
+
+/* Social Icons in Home Section */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  font-size: 40px; /* Increased size */
+  color: #4070f4;
+  margin-right: 20px; /* Increased gap */
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
 }
 
 /* Profile Picture Zoom Out Effect (Container expands) */
@@ -321,7 +339,7 @@ nav.sticky .menu-btn {
   }
 
   .social-icons a {
-    font-size: 24px;
+    font-size: 30px; /* Adjusted size for tablets */
   }
 }
 
@@ -350,7 +368,8 @@ nav.sticky .menu-btn {
   }
 
   .social-icons a {
-    font-size: 20px;
+    font-size: 25px; /* Adjusted size for mobile */
+    margin-right: 15px; /* Adjusted gap for mobile */
   }
 
   .home .button button {
