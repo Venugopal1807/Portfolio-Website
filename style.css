@@ -40,17 +40,26 @@ a:hover {
   color: #3057d5; /* Slightly darker blue */
 }
 
-/* Button Hover Effect (General Styling) */
-.button button {
+/* Unified Button Hover Effects */
+/* This rule applies consistent transform and shadow to most buttons */
+.home .button button,
+section .button button,
+.projects .buttons a, /* Target project live/github buttons */
+.contact-button button,
+.more-projects a {
   transition: all 0.3s ease; /* Ensure all button changes are smooth */
 }
 
-.button button:hover {
+.home .button button:hover,
+section .button button:hover,
+.contact-button button:hover,
+.more-projects a:hover,
+.projects .buttons a:hover { /* Apply hover to all button-like links/buttons */
   transform: translateY(-2px); /* Lift button on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
 }
 
-/* Overrides for specific button groups to ensure they maintain their distinct styles */
+/* Specific button styles (override colors/backgrounds but inherit transform/shadow) */
 .home .button button:hover {
   border-color: #4070f4;
   background-color: #fff;
@@ -67,30 +76,25 @@ section .button button:hover {
   background-color: #fff;
   color: #4070f4;
   border-color: #4070f4;
-  transform: none; /* Prevent lift if already styled */
 }
 
 .projects .buttons a.github-btn:hover {
   background-color: #fff;
   color: #0e2431;
   border-color: #0e2431;
-  transform: none; /* Prevent lift if already styled */
 }
 
 .contact-button button:hover {
   background: #fff;
   color: #4070f4;
   border-color: #4070f4;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px); /* Lift button on hover */
 }
 
 .more-projects a:hover {
   background: #fff;
   color: #4070f4;
   border-color: #4070f4;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px); /* Lift link on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for this one */
 }
 
 /* --- End General Hover Effects --- */
@@ -295,7 +299,6 @@ nav.sticky .menu-btn {
   color: #fff;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: all 0.4s ease;
 }
 
 /* Responsive Design */
@@ -474,7 +477,6 @@ section .button button {
   color: #fff;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: all 0.4s ease;
 }
 
 /* My Skills CSS */
@@ -747,7 +749,6 @@ section .button button {
   border: 2px solid transparent;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
 /* Responsive Design */
