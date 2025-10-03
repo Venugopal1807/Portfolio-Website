@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <title>Responsive Portfolio Website HTML CSS| CodingNepal</title>
+    <title>Venugopal's Portfolio </title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -13,8 +13,16 @@
 
   <body>
     <div class="scroll-button">
-      <a href="#home"><i class="fas fa-arrow-up"></i></a>
+      <!-- Round button with SVG circular progress and arrow icon -->
+      <a href="#home" class="to-top" aria-label="Scroll to top">
+        <svg class="progress-ring" width="56" height="56" viewBox="0 0 120 120" >
+          <circle class="progress-ring__back" cx="60" cy="60" r="52" stroke-width="8" fill="none" />
+          <circle class="progress-ring__circle" cx="60" cy="60" r="52" stroke-width="8" fill="none" />
+        </svg>
+        <i class="fas fa-arrow-up"></i>
+      </a>
     </div>
+
     <nav>
       <div class="navbar">
         <div class="logo"><a href="#">Portfolio.</a></div>
@@ -24,6 +32,14 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+
+          <!-- Theme toggle button (after Contact link) -->
+          <li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+
           <div class="cancel-btn">
             <i class="fas fa-times"></i>
           </div>
