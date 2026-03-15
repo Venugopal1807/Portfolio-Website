@@ -1,301 +1,487 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Venugopal's Portfolio </title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
 
-  <body>
-    <div class="scroll-button">
-      <!-- Round button with SVG circular progress and arrow icon -->
-      <a href="#home" class="to-top" aria-label="Scroll to top">
-        <svg class="progress-ring" width="56" height="56" viewBox="0 0 120 120" >
-          <circle class="progress-ring__back" cx="60" cy="60" r="52" stroke-width="8" fill="none" />
-          <circle class="progress-ring__circle" cx="60" cy="60" r="52" stroke-width="8" fill="none" />
-        </svg>
-        <i class="fas fa-arrow-up"></i>
-      </a>
+<head>
+  <meta charset="UTF-8" />
+  <title>Venu Gopal - Full Stack & Mobile Developer | React Native, Node.js</title>
+  <meta name="description"
+    content="Full Stack & Mobile Developer with experience in React Native, Kotlin, Node.js, payment integration, and BLE hardware. Built production mobile apps at Zapygo Energy.">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="scroll-button">
+    <a href="#home" class="to-top" aria-label="Scroll to top">
+      <svg class="progress-ring" width="56" height="56" viewBox="0 0 120 120">
+        <circle class="progress-ring__back" cx="60" cy="60" r="52" stroke-width="8" fill="none" />
+        <circle class="progress-ring__circle" cx="60" cy="60" r="52" stroke-width="8" fill="none" />
+      </svg>
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </div>
+
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Portfolio.</a></div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+      <div class="media-icons">
+        <a href="https://www.linkedin.com/in/venugopal-kunchepu" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Venugopal1807" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/Venugopalk1807" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
 
-    <nav>
-      <div class="navbar">
-        <div class="logo"><a href="#">Portfolio.</a></div>
-        <ul class="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-
-          <!-- Theme toggle button (after Contact link) -->
-          <li>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
-              <i class="fas fa-moon"></i>
-            </button>
-          </li>
-
-          <div class="cancel-btn">
-            <i class="fas fa-times"></i>
-          </div>
-        </ul>
-        <div class="media-icons">
-          <a href="https://www.linkedin.com/in/venugopal-kunchepu"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/Venugopal1807"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a href="https://x.com/Venugopalk1807"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </div>
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="profile-pic-container">
+        <img src="./Images/mypic2.jpg" alt="Venu Gopal - Full Stack Developer" />
       </div>
-      <div class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
-    </nav>
-
-    <section class="home" id="home">
-      <div class="home-content">
-        <div class="profile-pic-container">
-          <img src="./Images/mypic2.jpg" alt="Profile Picture" />
-        </div>
-        <div class="text">
-          <div class="text-one">Hello,</div>
-          <div class="text-two">I'm Venu Gopal</div>
-          <div class="text-three">
-            <span class="job-title-static">Software Developer</span>
-            <span class="job-title-dynamic"></span>
-          </div>
-          <div class="social-icons">
-            <a
-              href="https://www.linkedin.com/in/venugopal-kunchepu"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="https://github.com/Venugopal1807" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a href="https://x.com/Venugopalk1807" target="_blank"
-              ><i class="fab fa-twitter"></i
-            ></a>
-          </div>
-          <div class="button">
-            <button>Contact Me</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="content">
-        <div class="title"><span>About Me</span></div>
-        <div class="about-details">
-          <div class="left">
-            <img src="images/newphototrim.png" alt="" />
-          </div>
-          <div class="right">
-            <p>
-              I am a dedicated and an aspiring software developer actively
-              seeking my first opportunity in the tech industry. To gain
-              practical experience, I have worked on several real-time projects
-              that allowed me to apply core development concepts and build
-              functional web applications. Passionate about solving problems
-              through code and continuously improving by learning from hands-on
-              work and collaboration.
-            </p>
-            <div class="button">
-              <button>
-                <a
-                  href="https://drive.google.com/file/d/14oapRP87Hlvy2sXmHsrYQr7IicpbW38n/view?usp=sharing"
-                  >Download CV</a
-                >
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="skills" id="skills">
-      <div class="content">
-        <div class="title"><span>My Skillset</span></div>
-        <div class="skills-details">
-          <div class="skill-category">
-            <h3>Frontend Development</h3>
-            <p>Building responsive and interactive user interfaces.</p>
-            <div class="skills-list">
-              <div class="box">HTML</div>
-              <div class="box">CSS</div>
-              <div class="box">JavaScript</div>
-              <div class="box">React.js</div>
-              <div class="box">Bootstrap</div>
-              <div class="box">Tailwind CSS</div>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h3>Backend Development</h3>
-            <p>Developing robust and scalable server-side applications.</p>
-            <div class="skills-list">
-              <div class="box">Node.js</div>
-              <div class="box">Express.js</div>
-              <div class="box">MongoDB</div>
-              <div class="box">MySQL</div>
-              <div class="box">Django</div>
-              <div class="box">Flask</div>
-              <div class="box">Python</div>
-              <div class="box">Java</div>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h3>Tools & Platforms</h3>
-            <p>Utilizing modern tools to enhance development workflow.</p>
-            <div class="skills-list">
-              <div class="box">Git</div>
-              <div class="box">GitHub</div>
-              <div class="box">VS Code</div>
-              <div class="box">Postman</div>
-              <div class="box">Docker</div>
-              <div class="box">Firebase</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects" id="projects">
-      <div class="content">
-        <div class="title"><span>My Projects</span></div>
-        <div class="boxes">
-          <div class="box">
-            <div class="project-image">
-              <img src="./Images/AI Resume Scanner.png" alt="Ai Resume Scanner" />
-            </div>
-            <div class="topic">Ai Resume Scanner</div>
-            <p class="project-description">
-              A web tool utilizing AI to scan resumes, extract key information, and provide insights for job applications.
-            </p>
-            <div class="buttons">
-              <a href="https://ai-resume-scanner.streamlit.app/" class="live-btn">Live</a>
-              <a href="https://github.com/Venugopal1807/AI-Resume-Scanner" class="github-btn">GitHub</a>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="project-image">
-              <img src="./Images/one.png" alt="Chat Application" />
-            </div>
-            <div class="topic">Chat Application</div>
-            <p class="project-description">
-              A real-time chat application built with Python, enabling instant messaging between users.
-            </p>
-            <div class="buttons">
-              <a href="https://python-chat-app-isfe.onrender.com/" class="live-btn">Live</a>
-              <a href="https://github.com/Venugopal1807/Python-Chat-App" class="github-btn">GitHub</a>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="project-image">
-              <img src="./Images/two.png" alt="Admin Dashboard" />
-            </div>
-            <div class="topic">Admin Dashboard</div>
-            <p class="project-description">
-              A comprehensive administrative dashboard developed with React, offering data visualization and management features.
-            </p>
-            <div class="buttons">
-              <a href="https://react-admin-dashboard-gamma-two.vercel.app/" class="live-btn">Live</a>
-              <a href="https://github.com/Venugopal1807/React-Admin-Dashboard" class="github-btn">GitHub</a>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="project-image">
-              <img src="./Images/gemini.png" alt="Gemini Clone" />
-            </div>
-            <div class="topic">Gemini Clone</div>
-            <p class="project-description">
-              A functional clone of the Gemini AI interface, demonstrating UI/UX and API integration.
-            </p>
-            <div class="buttons">
-              <a href="https://gemini-clone-ashy-three.vercel.app/" class="live-btn">Live</a>
-              <a href="https://github.com/Venugopal1807/Gemini-Clone" class="github-btn">GitHub</a>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="project-image">
-              <img src="./Images/portfolio image.png" alt="Portfolio Website" />
-            </div>
-            <div class="topic">Portfolio Website</div>
-            <p class="project-description">
-              The responsive personal portfolio website showcasing skills, projects, and contact information.
-            </p>
-            <div class="buttons">
-              <a href="https://venugopalk.netlify.app/" class="live-btn">Live</a>
-              <a href="https://github.com/Venugopal1807/Portfolio-Website" class="github-btn">GitHub</a>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="project-image">
-              <img src="project6.jpg" alt="Social Media App" />
-            </div>
-            <div class="topic">Social Media App</div>
-            <p class="project-description">
-              A prototype social media application, designed for user interaction and content sharing.
-            </p>
-            <div class="buttons">
-              <a href="#" class="live-btn">Live</a>
-              <a href="#" class="github-btn">GitHub</a>
-            </div>
-          </div>
-        </div>
-        <div class="more-projects">
-          <a href="https://github.com/your-github-profile" target="_blank"
-            >More Projects</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="content">
-        <div class="title"><span>Contact Me</span></div>
-        <form class="contact-form">
-          <div class="input-box">
-            <input type="text" placeholder="Your Name" required />
-          </div>
-          <div class="input-box">
-            <input type="email" placeholder="Your Email" required />
-          </div>
-          <div class="input-box">
-            <textarea placeholder="Your Message" required></textarea>
-          </div>
-          <div class="contact-button">
-            <button type="submit">Send Message</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <footer>
       <div class="text">
-        <span
-          >Created By <a href="#">Venu Gopal</a> | &#169; 2025 All Rights
-          Reserved</span
-        >
+        <div class="text-one">Hello,</div>
+        <div class="text-two">I'm Venu Gopal</div>
+        <div class="text-three">Full Stack & Mobile Developer</div>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/venugopal-kunchepu" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Venugopal1807" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://x.com/Venugopalk1807" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <div class="button">
+          <a href="#contact"><button>Contact Me</button></a>
+          <a href="https://drive.google.com/file/d/1W6zeJLAZTPSE3jzWgBV7um-dMIW-xFYv/view?usp=sharing" target="_blank">
+            <button class="secondary-btn">Download Resume</button>
+          </a>
+        </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
-  </body>
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title"><span>About Me</span></div>
+      <div class="about-details">
+        <div class="left">
+          <img src="images/newphototrim.png" alt="Venu Gopal" />
+        </div>
+        <div class="right">
+          <p>
+            I'm a <strong>Full Stack & Mobile Developer</strong> with hands-on experience building production mobile and
+            backend systems for logistics and energy-tech applications.
+          </p>
+          <p>
+            During my software engineering internship at <strong>Zapygo Energy</strong>, I:
+          </p>
+          <ul class="experience-highlights">
+            <li>✅ Integrated <strong>HDFC SmartGateway payment system</strong> (coordinated with bank's technical team)
+            </li>
+            <li>✅ Implemented <strong>Bluetooth Low Energy (BLE)</strong> communication with fuel dispensing hardware
+            </li>
+            <li>✅ Built <strong>offline-first mobile architecture</strong> supporting zero-network environments</li>
+            <li>✅ Developed backend APIs serving multiple applications with Node.js and PostgreSQL</li>
+          </ul>
+          <p>
+            I specialize in <strong>React Native, Kotlin, Node.js, and TypeScript</strong>, and building systems that
+            work reliably in challenging real-world conditions. Currently seeking full-stack or mobile development roles
+            where I can contribute production-ready code from day one.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> React Native, Kotlin, Node.js, TypeScript, PostgreSQL, MongoDB, REST APIs,
+            Payment Integration, BLE/IoT
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Professional Experience -->
+  <section class="experience" id="experience">
+    <div class="content">
+      <div class="title"><span>Professional Experience</span></div>
+      <div class="experience-container">
+        <div class="experience-card">
+          <div class="experience-header">
+            <h3>Software Engineering Intern</h3>
+            <div class="company-info">
+              <h4>Zapygo Energy Pvt. Ltd.</h4>
+              <p class="duration">Dec 2025 - Mar 2026 | Bengaluru (Remote)</p>
+            </div>
+          </div>
+          <div class="experience-description">
+            <p>Built production-ready fuel delivery platform with mobile apps, payment integration, and BLE hardware
+              communication.</p>
+
+            <h4>Key Achievements:</h4>
+            <ul>
+              <li>🔹 Integrated <strong>HDFC SmartGateway</strong> payment system coordinating directly with the bank's
+                technical team — successfully processed <strong>40+ test transactions</strong> across UPI, card, and
+                net banking with 99% success rate</li>
+              <li>🔹 Implemented <strong>Bluetooth Low Energy (BLE)</strong> communication between mobile apps and fuel
+                dispensing MDU controllers across <strong>5+ device models</strong>, achieving connections.</li>
+              <li>🔹 Designed <strong>offline-first architecture</strong> using SQLite/Room supporting <strong>100+
+                  offline order scenarios</strong> in zero-network environments like remote mining sites</li>
+              <li>🔹 Developed <strong>backend REST APIs</strong> using Node.js, TypeScript, and PostgreSQL serving
+                Customer, Driver, and Petrol Pump applications with strict <strong>multi-tenant data isolation</strong>
+              </li>
+              <li>🔹 Built <strong>geo-based service zoning system</strong> for dynamic delivery radius mapping and
+                real-time coverage validation</li>
+              <li>🔹 Ran <strong>API test cases</strong> via Postman catching critical edge cases across payment,
+                BLE, and offline sync workflows</li>
+              <li>🔹 Managed <strong>production deployments</strong> using Expo EAS, Gradle, and NDK across all 3 mobile
+                applications</li>
+            </ul>
+
+            <div class="tech-stack">
+              <strong>Tech Stack:</strong>
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Kotlin</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">BLE</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">HDFC Payment Gateway</span>
+            </div>
+
+            <div class="experience-links">
+              <p><strong>📄 Certificate:</strong> Available upon request</p>
+              <p><em>Note: App demo videos and screenshots available - contact for details</em></p>
+            </div>
+          </div>
+          <div class="experience-demos">
+            <h4>📹 Work Demonstrations</h4>
+            <div class="demo-links">
+              <a href="https://youtu.be/T_aknmj_OMk" target="_blank" class="demo-btn">
+                <i class="fas fa-play-circle"></i> Mobile Apps Demo
+              </a>
+              <a href="https://youtube.com/shorts/yjLM73QRG10?feature=share" target="_blank" class="demo-btn">
+                <i class="fas fa-play-circle"></i> Payment Integration
+              </a>
+              <a href="https://youtube.com/shorts/1LNf6l4ac_c?feature=share" target="_blank" class="demo-btn">
+                <i class="fas fa-play-circle"></i> BLE Hardware Demo
+              </a>
+            </div>
+            <p class="demo-note"><em>Screen recordings from development/testing environment. Code and sensitive data
+                remain confidential as per agreement.</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work Section -->
+  <section class="featured-work" id="featured-work">
+    <div class="content">
+      <div class="title"><span>Featured Work</span></div>
+
+      <div class="work-showcase">
+        <div class="work-card">
+          <div class="work-header">
+            <h3>Fuel Delivery Platform</h3>
+            <span class="work-tag">Zapygo Energy Pvt. Ltd. — Production System</span>
+          </div>
+          <p class="work-description">
+            Built a complete fuel delivery ecosystem with 3 mobile applications,
+            backend APIs, payment gateway integration, and Bluetooth hardware
+            communication during my software engineering internship at Zapygo Energy.
+          </p>
+
+          <div class="work-highlights">
+            <div class="highlight-item">
+              <strong>3 Mobile Apps</strong>
+              <span>Customer, Driver, Petrol Pump Manager</span>
+            </div>
+            <div class="highlight-item">
+              <strong>Payment Gateway</strong>
+              <span>HDFC SmartGateway Integration</span>
+            </div>
+            <div class="highlight-item">
+              <strong>Hardware Integration</strong>
+              <span>BLE Communication with MDU Controllers</span>
+            </div>
+            <div class="highlight-item">
+              <strong>Offline-First</strong>
+              <span>SQLite/Room for Zero-Network Scenarios</span>
+            </div>
+          </div>
+
+          <div class="demo-videos">
+            <h4>📹 Demo Videos</h4>
+            <div class="video-grid">
+              <a href="https://youtu.be/T_aknmj_OMk" target="_blank" class="video-card">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Mobile Apps Demo</span>
+                <small>All 3 Apps</small>
+              </a>
+              <a href="https://youtube.com/shorts/yjLM73QRG10?feature=share" target="_blank" class="video-card">
+                <i class="fas fa-credit-card"></i>
+                <span>Payment Integration</span>
+                <small>HDFC SmartGateway</small>
+              </a>
+              <a href="https://youtube.com/shorts/1LNf6l4ac_c?feature=share" target="_blank" class="video-card">
+                <i class="fas fa-bluetooth"></i>
+                <span>BLE Hardware Demo</span>
+                <small>MDU Controller</small>
+              </a>
+            </div>
+          </div>
+
+          <p class="confidentiality-note">
+            <i class="fas fa-lock"></i> Code and implementation details remain
+            confidential per agreement. Videos show functionality only.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="content">
+      <div class="title"><span>My Skillset</span></div>
+      <div class="skills-details">
+        <div class="skill-category">
+          <h3>Frontend & Mobile Development</h3>
+          <p>Building responsive web and mobile applications</p>
+          <div class="skills-list">
+            <div class="box">JavaScript</div>
+            <div class="box">TypeScript</div>
+            <div class="box">React.js</div>
+            <div class="box">React Native</div>
+            <div class="box">Android (Kotlin)</div>
+            <div class="box">HTML/CSS</div>
+            <div class="box">Tailwind CSS</div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Backend Development</h3>
+          <p>Developing robust and scalable server-side applications</p>
+          <div class="skills-list">
+            <div class="box">Node.js</div>
+            <div class="box">Express.js</div>
+            <div class="box">Python</div>
+            <div class="box">Flask</div>
+            <div class="box">FastAPI</div>
+            <div class="box">REST APIs</div>
+            <div class="box">JWT Auth</div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Databases</h3>
+          <p>Managing and optimizing data storage</p>
+          <div class="skills-list">
+            <div class="box">PostgreSQL</div>
+            <div class="box">MongoDB</div>
+            <div class="box">SQLite/Room</div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Integrations & Hardware</h3>
+          <p>Connecting systems and working with hardware</p>
+          <div class="skills-list">
+            <div class="box">HDFC Payment Gateway</div>
+            <div class="box">Bluetooth Low Energy (BLE)</div>
+            <div class="box">Firebase</div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Tools & Platforms</h3>
+          <p>Utilizing modern tools to enhance development workflow</p>
+          <div class="skills-list">
+            <div class="box">Git</div>
+            <div class="box">GitHub</div>
+            <div class="box">VS Code</div>
+            <div class="box">Postman</div>
+            <div class="box">Expo</div>
+            <div class="box">Vite</div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Design & Testing</h3>
+          <p>Designing interfaces and validating system quality</p>
+          <div class="skills-list">
+            <div class="box">Figma</div>
+            <div class="box">Postman</div>
+            <div class="box">Regression Testing</div>
+            <div class="box">API Testing</div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Deployment & Cloud</h3>
+          <p>Deploying and managing applications across platforms</p>
+          <div class="skills-list">
+            <div class="box">Railway</div>
+            <div class="box">Replit</div>
+            <div class="box">Vercel</div>
+            <div class="box">Expo EAS</div>
+            <div class="box">Google Cloud Console</div>
+            <div class="box">Cloudflare</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="content">
+      <div class="title"><span>My Projects</span></div>
+
+      <div class="boxes">
+        <div class="box">
+          <div class="project-image">
+            <img src="./Images/AI Resume Scanner.png" alt="AI Resume Scanner" />
+          </div>
+          <div class="topic">AI Resume Scanner</div>
+          <p class="project-description">
+            Smart resume screening app using Python, Streamlit, and NLP. Compares resumes with job descriptions and
+            generates match scores, reducing screening time by 25%.
+          </p>
+          <p class="tech-info"><strong>Tech:</strong> Python, Streamlit, NLP, Machine Learning</p>
+          <div class="buttons">
+            <a href="https://ai-resume-scanner.streamlit.app/" class="live-btn" target="_blank">Live Demo</a>
+            <a href="https://github.com/Venugopal1807/AI-Resume-Scanner" class="github-btn" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="project-image">
+            <img src="./Images/one.png" alt="Chat Application" />
+          </div>
+          <div class="topic">Chat Application</div>
+          <p class="project-description">
+            Real-time browser chat app with WebSocket support and random avatar generation for up to 20 concurrent
+            users. Flask-Socket.IO backend handles sessions and broadcasting.
+          </p>
+          <p class="tech-info"><strong>Tech:</strong> Flask, Socket.IO, JavaScript, WebSockets</p>
+          <div class="buttons">
+            <a href="https://python-chat-app-isfe.onrender.com/" class="live-btn" target="_blank">Live Demo</a>
+            <a href="https://github.com/Venugopal1807/Python-Chat-App" class="github-btn" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="project-image">
+            <img src="./Images/two.png" alt="Admin Dashboard" />
+          </div>
+          <div class="topic">Admin Dashboard</div>
+          <p class="project-description">
+            Responsive admin panel with interactive charts, data tables, and smooth animations. Built with React and
+            Vite for fast development and optimized deployment.
+          </p>
+          <p class="tech-info"><strong>Tech:</strong> React, Tailwind CSS, Recharts, Framer Motion, Vite</p>
+          <div class="buttons">
+            <a href="https://react-admin-dashboard-gamma-two.vercel.app/" class="live-btn" target="_blank">Live Demo</a>
+            <a href="https://github.com/Venugopal1807/React-Admin-Dashboard" class="github-btn"
+              target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="project-image">
+            <img src="./Images/gemini.png" alt="Gemini Clone" />
+          </div>
+          <div class="topic">Gemini Clone</div>
+          <p class="project-description">
+            Recreated the Gemini AI interface with clean UI and full responsiveness. Built reusable React components
+            optimized for both desktop and mobile screens.
+          </p>
+          <p class="tech-info"><strong>Tech:</strong> React.js, Tailwind CSS</p>
+          <div class="buttons">
+            <a href="https://gemini-clone-ashy-three.vercel.app/" class="live-btn" target="_blank">Live Demo</a>
+            <a href="https://github.com/Venugopal1807/Gemini-Clone" class="github-btn" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="more-projects">
+        <a href="https://github.com/Venugopal1807" target="_blank">View All Projects on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="title"><span>Contact Me</span></div>
+      <div class="contact-info">
+        <p>Interested in working together? Let's connect!</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:kunchepu.venugopal@gmail.com">kunchepu.venugopal@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+916301954133">+91 6301954133</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/venugopal-kunchepu" target="_blank">Connect on LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/Venugopal1807" target="_blank">View GitHub Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="text">
+      <span>Created By <a href="#">Venu Gopal</a> | &#169; 2025 All Rights
+        Reserved</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
