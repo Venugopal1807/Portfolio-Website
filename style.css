@@ -1745,7 +1745,7 @@ section .button a {
 
 .case-block h3 {
   margin-bottom: 10px;
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
 .case-block ul {
@@ -1772,4 +1772,14 @@ section .button a {
   margin-top: 10px;
   font-size: 14px;
   line-height: 1.6;
+}
+
+.case-hidden {
+  display: none;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  background: var(--section-bg);
+  padding: 10px;
+  border-radius: 6px;
 }
