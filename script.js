@@ -102,6 +102,11 @@ function setProgress(percent) {
   }
 }
 
+function toggleSmartFuelCase() {
+  const el = document.getElementById("smartfuel-case");
+  el.style.display = el.style.display === "block" ? "none" : "block";
+}
+
 function updateScrollProgress() {
   const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
