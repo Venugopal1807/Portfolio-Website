@@ -102,9 +102,14 @@ function setProgress(percent) {
   }
 }
 
-function toggleSmartFuelCase() {
-  const el = document.getElementById("smartfuel-case");
-  el.style.display = el.style.display === "block" ? "none" : "block";
+function toggleCase(btn) {
+  const card = btn.closest(".box");
+  const caseEl = card.querySelector(".case-hidden");
+
+  if (!caseEl) return;
+
+  caseEl.style.display =
+    caseEl.style.display === "block" ? "none" : "block";
 }
 
 function updateScrollProgress() {
