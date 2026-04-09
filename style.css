@@ -1755,3 +1755,21 @@ section .button a {
 .case-block li {
   margin-bottom: 6px;
 }
+
+
+.case-single {
+  margin-top: 20px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.case-single p {
+  margin-bottom: 12px;
+}
+
+.case-hidden {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
