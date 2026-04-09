@@ -94,16 +94,16 @@
         </div>
         <div class="right">
           <p>
-            I'm a <strong>Full Stack & Mobile Engineer</strong> with production internship experience at 
-            Zapygo Energy building offline-first React Native and Kotlin applications for fuel logistics. 
-            Owned key features including BLE hardware integration, geo-based service zoning, HDFC 
+            I'm a <strong>Full Stack & Mobile Engineer</strong> with production internship experience at
+            Zapygo Energy building offline-first React Native and Kotlin applications for fuel logistics.
+            Owned key features including BLE hardware integration, geo-based service zoning, HDFC
             SmartGateway payment integration, and SQLite/Room offline-first architecture.
           </p>
-        <break></break>
+          <break></break>
           <p>
-            Currently developing <strong>SmartFuel Tracker a production-grade offline-first fuel delivery 
-              platform</strong> with BLE simulation, idempotent sync engine, payment verification. Focused 
-            on building reliable mobile systems for real-world low-network and hardware-constrained environments. 
+            Currently developing <strong>SmartFuel Tracker a production-grade offline-first fuel delivery
+              platform</strong> with BLE simulation, idempotent sync engine, payment verification. Focused
+            on building reliable mobile systems for real-world low-network and hardware-constrained environments.
           </p>
         </div>
       </div>
@@ -126,39 +126,29 @@
 
           <div class="work-highlights">
             <div class="highlight-item">
-              <strong>3 Mobile Apps</strong>
-              <span>Customer, Driver, Petrol Pump Manager</span>
+              <strong>Role</strong>
+              <span>Software Engineering Intern</span>
             </div>
             <div class="highlight-item">
-              <strong>Payment Gateway</strong>
-              <span>HDFC SmartGateway: 150+ transactions, 99% success</span>
+              <strong>Scope</strong>
+              <span>Driver, Customer, and Petrol Pump apps</span>
             </div>
             <div class="highlight-item">
-              <strong>BLE Hardware</strong>
-              <span>MDU Controllers: 5+ device models</span>
-            </div>
-            <div class="highlight-item">
-              <strong>Offline-First</strong>
-              <span>SQLite/Room: 100+ offline scenarios</span>
+              <strong>Focus</strong>
+              <span>BLE, payments, offline sync</span>
             </div>
           </div>
 
           <div class="experience-description">
             <ul>
-              <li>🔹 Owned end-to-end Driver Application in <strong>Kotlin/Jetpack Compose</strong>, 
-                implemented authentication, real-time vehicle switching, complex orders lifecycle, live map, 
-                and 50m-radius BLE fuel dispensing with Start/End OTP.</li>
-              <li>🔹 Built Petrol Pump Manager Application from scratch in <strong>React Native Expo</strong>, 
-                delivered live orders view, vehicle/driver assignment, and real-time fuel data monitoring.</li>
-              <li>🔹 Designed and implemented <strong>geo-based service zoning system</strong> (30 km radius) 
-                using Haversine formula + bounding box optimization, created reusable shared package consumed 
-                across all repos.</li>
-              <li>🔹 Led <strong>HDFC SmartGateway payment integration</strong> in Customer App, migrated from 
-                Expo to bare React Native CLI and coordinated directly with HDFC technical team for sandbox-to-
-                production rollout.</li>
-              <li>🔹 Designed offline-first SQLite/Room architecture with auto-refresh logic for Driver and 
-                Customer apps, independently handled PostgreSQL schema migrations, build issues, and 
-                cross-platform debugging.</li>
+              <li>🔹 Owned end-to-end development of 3 mobile apps (Driver – Kotlin, Customer & Admin – React Native)
+                for a real-time fuel delivery system.</li>
+
+              <li>🔹 Built core features: order lifecycle, BLE-based fuel validation (50m + OTP), geo-zoning
+                (Haversine), payments (HDFC), and live tracking.</li>
+
+              <li>🔹 Designed offline-first architecture (SQLite/Room + sync) to ensure reliable operations in
+                low-connectivity environments.</li>
             </ul>
           </div>
 
@@ -200,64 +190,32 @@
   <section class="case-study" id="case-study">
     <div class="content">
       <div class="title"><span>Case Study: Fuel Logistics Platform (Zapygo)</span></div>
-  
-      <div class="case-container">
-  
-        <div class="case-block">
-          <h3>🧩 Problem</h3>
-          <p>
-            Traditional fuel delivery systems lack real-time tracking, security, and reliability. Manual operations
-            lead to errors, fuel theft risks, and poor visibility in delivery lifecycle.
-          </p>
-        </div>
-  
-        <div class="case-block">
-          <h3>⚙️ System Overview</h3>
-          <ul>
-            <li>3 Applications: Customer, Driver, Petrol Pump Admin</li>
-            <li>Shared PostgreSQL database</li>
-            <li>Real-time + offline-first hybrid architecture</li>
-          </ul>
-        </div>
-  
-        <div class="case-block">
-          <h3>🧠 Architecture Decision</h3>
-          <p>
-            Initially attempted a single backend for all apps but faced coupling and complexity issues.
-            Final approach used separate backends for better scalability and maintainability.
-          </p>
-        </div>
-  
-        <div class="case-block">
-          <h3>🔐 Key Challenges</h3>
-          <ul>
-            <li>Secure fuel dispensing using BLE + OTP + geofencing</li>
-            <li>Offline-first system using SQLite/Room with sync engine</li>
-            <li>Real-time order lifecycle management</li>
-            <li>Geo-based service zoning (30km radius)</li>
-          </ul>
-        </div>
-  
-        <div class="case-block">
-          <h3>🛠️ My Contributions</h3>
-          <ul>
-            <li>Built Driver App (Kotlin + Jetpack Compose)</li>
-            <li>Implemented BLE validation logic</li>
-            <li>Designed order lifecycle system</li>
-            <li>Integrated HDFC SmartGateway payments</li>
-            <li>Built offline-first architecture</li>
-          </ul>
-        </div>
-  
-        <div class="case-block">
-          <h3>📊 Impact</h3>
-          <ul>
-            <li>Production-grade real-world system</li>
-            <li>Handled 100+ offline scenarios</li>
-            <li>Enabled secure fuel delivery workflows</li>
-          </ul>
-        </div>
-  
+
+      <div class="case-single">
+        <p>
+          Built a real-time fuel logistics platform with 3 apps (Customer, Driver, Admin) handling secure doorstep fuel
+          delivery.
+          The system required solving real-world challenges like low network environments, fuel theft prevention, and
+          multi-role coordination.
+        </p>
+
+        <p>
+          Implemented BLE-based fuel validation (50m + OTP), geo-based service zoning, and a full order lifecycle from
+          request to delivery.
+          Designed offline-first architecture using SQLite/Room with sync logic to ensure uninterrupted operations in
+          remote areas.
+        </p>
+
+        <p>
+          Worked on a shared database system with separate backend services to maintain stability and reduce coupling.
+          Integrated HDFC SmartGateway payments and enabled real-time tracking for operational transparency.
+        </p>
+
+        <p>
+          <strong>Outcome:</strong> Production-grade system supporting real-world delivery workflows with secure
+          dispensing,
+          offline reliability, and multi-app coordination.
+        </p>
       </div>
     </div>
   </section>
@@ -332,6 +290,40 @@
       <div class="title"><span>My Projects</span></div>
 
       <div class="boxes">
+
+        <div class="project-card">
+          <div class="project-title">SmartFuel Tracker</div>
+          <div class="project-subtitle">Offline-First BLE Fuel Delivery Platform</div>
+
+          <p>
+            Production-style mobile system designed for fuel delivery in low-network environments.
+            Handles complete driver workflow including BLE validation, offline payments, and sync engine.
+          </p>
+
+          <div class="project-buttons">
+            <a href="https://smartfuel-tracker-production.up.railway.app" target="_blank">Live API</a>
+            <a href="https://github.com/Venugopal1807/smartfuel-tracker" target="_blank">GitHub</a>
+            <button onclick="toggleSmartFuelCase()">Case Study</button>
+          </div>
+
+          <div id="smartfuel-case" class="case-hidden">
+            <p>
+              Designed a production-grade offline-first architecture where drivers can operate fully without network.
+              Implemented WAL-mode SQLite queue, UUID-based idempotent sync, and HMAC-secured payment flow.
+            </p>
+
+            <p>
+              Integrated BLE hybrid scanning with fallback for demo reliability, heartbeat-based sync validation,
+              and on-device invoice generation. System mirrors real-world logistics constraints and is scalable for
+              production deployment.
+            </p>
+
+            <p>
+              Includes CI/CD pipelines, unit testing, and modular backend design (Node.js + PostgreSQL).
+            </p>
+          </div>
+        </div>
+
         <div class="box">
           <div class="project-image">
             <img src="./Images/AI Resume Scanner.png" alt="AI Resume Scanner" />
