@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Venu Gopal - Full Stack & Mobile Developer | React Native, Node.js</title>
+  <title>Venu Gopal - Full Stack & Mobile Engineer | Offline-first • BLE • Real-time Systems</title>
   <meta name="description"
     content="Full Stack & Mobile Developer with experience in React Native, Kotlin, Node.js, payment integration, and BLE hardware. Built production mobile apps at Zapygo Energy.">
   <link rel="stylesheet" href="style.css" />
@@ -29,6 +29,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#case-study">Case Study</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -184,6 +185,71 @@
           </div>
 
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-study" id="case-study">
+    <div class="content">
+      <div class="title"><span>Case Study: Fuel Logistics Platform (Zapygo)</span></div>
+  
+      <div class="case-container">
+  
+        <div class="case-block">
+          <h3>🧩 Problem</h3>
+          <p>
+            Traditional fuel delivery systems lack real-time tracking, security, and reliability. Manual operations
+            lead to errors, fuel theft risks, and poor visibility in delivery lifecycle.
+          </p>
+        </div>
+  
+        <div class="case-block">
+          <h3>⚙️ System Overview</h3>
+          <ul>
+            <li>3 Applications: Customer, Driver, Petrol Pump Admin</li>
+            <li>Shared PostgreSQL database</li>
+            <li>Real-time + offline-first hybrid architecture</li>
+          </ul>
+        </div>
+  
+        <div class="case-block">
+          <h3>🧠 Architecture Decision</h3>
+          <p>
+            Initially attempted a single backend for all apps but faced coupling and complexity issues.
+            Final approach used separate backends for better scalability and maintainability.
+          </p>
+        </div>
+  
+        <div class="case-block">
+          <h3>🔐 Key Challenges</h3>
+          <ul>
+            <li>Secure fuel dispensing using BLE + OTP + geofencing</li>
+            <li>Offline-first system using SQLite/Room with sync engine</li>
+            <li>Real-time order lifecycle management</li>
+            <li>Geo-based service zoning (30km radius)</li>
+          </ul>
+        </div>
+  
+        <div class="case-block">
+          <h3>🛠️ My Contributions</h3>
+          <ul>
+            <li>Built Driver App (Kotlin + Jetpack Compose)</li>
+            <li>Implemented BLE validation logic</li>
+            <li>Designed order lifecycle system</li>
+            <li>Integrated HDFC SmartGateway payments</li>
+            <li>Built offline-first architecture</li>
+          </ul>
+        </div>
+  
+        <div class="case-block">
+          <h3>📊 Impact</h3>
+          <ul>
+            <li>Production-grade real-world system</li>
+            <li>Handled 100+ offline scenarios</li>
+            <li>Enabled secure fuel delivery workflows</li>
+          </ul>
+        </div>
+  
       </div>
     </div>
   </section>
