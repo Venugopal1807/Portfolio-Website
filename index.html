@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Venu Gopal - Full Stack & Mobile Engineer | Offline-first • BLE • Real-time Systems</title>
+  <title>Venu Gopal - Mobile Engineer | Offline-first • BLE • Real-time Systems</title>
   <meta name="description"
     content="Full Stack & Mobile Developer with experience in React Native, Kotlin, Node.js, payment integration, and BLE hardware. Built production mobile apps at Zapygo Energy.">
   <link rel="stylesheet" href="style.css" />
@@ -63,7 +63,7 @@
       <div class="text">
         <div class="text-one">Hello,</div>
         <div class="text-two">I'm Venu Gopal</div>
-        <div class="text-three">Full Stack & Mobile Developer</div>
+        <div class="text-three">Mobile Engineer</div>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/venugopal-kunchepu" target="_blank">
             <i class="fab fa-linkedin"></i>
@@ -94,7 +94,7 @@
         </div>
         <div class="right">
           <p>
-            I'm a <strong>Full Stack & Mobile Engineer</strong> with production internship experience at
+            I'm a <strong>Mobile Engineer</strong> with production internship experience at
             Zapygo Energy building offline-first React Native and Kotlin applications for fuel logistics.
             Owned key features including BLE hardware integration, geo-based service zoning, HDFC
             SmartGateway payment integration, and SQLite/Room offline-first architecture.
@@ -121,21 +121,6 @@
             <div class="company-info">
               <h4>Zapygo Energy Pvt. Ltd.</h4>
               <p class="duration">Dec 2025 – Mar 2026 | Bengaluru (Remote)</p>
-            </div>
-          </div>
-
-          <div class="work-highlights">
-            <div class="highlight-item">
-              <strong>Role</strong>
-              <span>Software Engineering Intern</span>
-            </div>
-            <div class="highlight-item">
-              <strong>Scope</strong>
-              <span>Driver, Customer, and Petrol Pump apps</span>
-            </div>
-            <div class="highlight-item">
-              <strong>Focus</strong>
-              <span>BLE, payments, offline sync</span>
             </div>
           </div>
 
@@ -291,35 +276,31 @@
 
       <div class="boxes">
 
-        <div class="project-card">
-          <div class="project-title">SmartFuel Tracker</div>
-          <div class="project-subtitle">Offline-First BLE Fuel Delivery Platform</div>
+        <div class="box">
+          <div class="project-image">
+            <img src="images/smartfuel.png" alt="SmartFuel Tracker">
+          </div>
 
-          <p>
-            Production-style mobile system designed for fuel delivery in low-network environments.
-            Handles complete driver workflow including BLE validation, offline payments, and sync engine.
-          </p>
+          <div class="topic">SmartFuel Tracker</div>
 
-          <div class="project-buttons">
-            <a href="https://smartfuel-tracker-production.up.railway.app" target="_blank">Live API</a>
-            <a href="https://github.com/Venugopal1807/smartfuel-tracker" target="_blank">GitHub</a>
-            <button onclick="toggleSmartFuelCase()">Case Study</button>
+          <div class="project-description">
+            Offline-first BLE fuel delivery system with sync engine, payments, and real-world driver workflow.
+          </div>
+
+          <div class="buttons">
+            <a href="https://smartfuel-tracker-production.up.railway.app" target="_blank" class="live-btn">Live</a>
+            <a href="https://github.com/Venugopal1807/smartfuel-tracker" target="_blank" class="github-btn">GitHub</a>
+          </div>
+
+          <div class="buttons" style="margin-top:10px;">
+            <a href="javascript:void(0)" onclick="toggleSmartFuelCase()" class="live-btn">Case Study</a>
           </div>
 
           <div id="smartfuel-case" class="case-hidden">
             <p>
-              Designed a production-grade offline-first architecture where drivers can operate fully without network.
-              Implemented WAL-mode SQLite queue, UUID-based idempotent sync, and HMAC-secured payment flow.
-            </p>
-
-            <p>
-              Integrated BLE hybrid scanning with fallback for demo reliability, heartbeat-based sync validation,
-              and on-device invoice generation. System mirrors real-world logistics constraints and is scalable for
-              production deployment.
-            </p>
-
-            <p>
-              Includes CI/CD pipelines, unit testing, and modular backend design (Node.js + PostgreSQL).
+              Designed offline-first architecture using SQLite WAL queue, UUID idempotent sync, and HMAC-secured
+              payments.
+              Built BLE hybrid scan system with fallback and heartbeat-based sync validation for real-world reliability.
             </p>
           </div>
         </div>
