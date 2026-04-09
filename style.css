@@ -1723,3 +1723,35 @@ section .button a {
 .dark .tech-info {
   background: #1a2332;
 }
+
+.case-study {
+  background: var(--section-bg);
+  padding: 60px 20px;
+}
+
+.case-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.case-block {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.case-block h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.case-block ul {
+  padding-left: 20px;
+}
+
+.case-block li {
+  margin-bottom: 6px;
+}
