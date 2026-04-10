@@ -606,14 +606,13 @@ section .button button {
 
 /* Projects Section */
 .projects .boxes {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-content: space-between;
 }
 
 .projects .boxes .box {
-  width: calc(100% / 3 - 20px);
   text-align: center;
   border-radius: 12px;
   padding: 20px;
@@ -885,6 +884,18 @@ footer .text span a:hover {
   .about .left img {
     height: 350px;
     width: 350px;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects .boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects .boxes {
+    grid-template-columns: 1fr;
   }
 }
 
