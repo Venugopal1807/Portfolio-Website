@@ -103,10 +103,9 @@ function setProgress(percent) {
 }
 
 function toggleCase(btn) {
-  const card = btn.closest(".box");
-  const caseEl = card.querySelector(".case-hidden");
+  const caseEl = btn.parentElement.nextElementSibling;
 
-  if (!caseEl) return;
+  if (!caseEl || !caseEl.classList.contains("case-hidden")) return;
 
   caseEl.style.display =
     caseEl.style.display === "block" ? "none" : "block";
