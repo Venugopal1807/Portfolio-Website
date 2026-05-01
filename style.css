@@ -1795,3 +1795,20 @@ section .button a {
   padding: 10px;
   border-radius: 6px;
 }
+
+/* Prevent case-study expansion from stretching sibling grid cards */
+.projects .boxes {
+  align-items: start; /* was default 'stretch' — this is the key fix */
+}
+
+.case-hidden {
+  display: none;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  background: var(--section-bg);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: left;
+  color: var(--text);      /* fix: text was hardcoded black, breaks dark mode */
+}
