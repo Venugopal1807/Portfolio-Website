@@ -103,10 +103,10 @@ function setProgress(percent) {
 }
 
 function toggleCase(btn) {
-  const caseEl = btn.parentElement.nextElementSibling;
-
-  if (!caseEl || !caseEl.classList.contains("case-hidden")) return;
-
+  const card = btn.closest(".box");
+  if (!card) return;
+  const caseEl = card.querySelector(".case-hidden");
+  if (!caseEl) return;
   caseEl.style.display =
     caseEl.style.display === "block" ? "none" : "block";
 }
