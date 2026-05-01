@@ -1812,3 +1812,130 @@ section .button a {
   text-align: left;
   color: var(--text);      /* fix: text was hardcoded black, breaks dark mode */
 }
+
+/* ========== RESPONSIVE: iPad Mini (768px), iPad Air (820px), iPad Pro (1024px) ========== */
+@media (max-width: 1024px) {
+  .projects .boxes {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+
+  .experience-card {
+    padding: 25px 20px;
+  }
+
+  .demo-links {
+    flex-wrap: wrap;
+  }
+
+  .demo-btn {
+    flex: 1 1 auto;
+    min-width: 140px;
+    justify-content: center;
+  }
+
+  .contact .content {
+    width: 75%;
+  }
+}
+
+@media (max-width: 820px) {
+  .home {
+    height: auto;
+    padding: 80px 0 40px;
+  }
+
+  .home .home-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .profile-pic-container {
+    width: 280px;
+    height: 280px;
+    order: -1;
+  }
+
+  .home .text {
+    order: 1;
+  }
+
+  .home .button {
+    justify-content: center;
+  }
+}
+
+/* ========== RESPONSIVE: All phones up to 480px ========== */
+@media (max-width: 480px) {
+  .home .text-two {
+    font-size: 30px;
+  }
+
+  .home .text-three {
+    font-size: 16px;
+  }
+
+  .profile-pic-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .projects .boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-header h3 {
+    font-size: 18px;
+  }
+
+  .experience-header h4 {
+    font-size: 16px;
+  }
+
+  .demo-links {
+    flex-direction: column;
+  }
+
+  .demo-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact .content {
+    width: 95%;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+
+  section .content {
+    width: 92%;
+  }
+
+  .skill-category {
+    width: 100%;
+  }
+}
+
+/* ========== Small phones (320px - 375px: iPhone SE, Galaxy A series) ========== */
+@media (max-width: 375px) {
+  .home .text-two {
+    font-size: 26px;
+  }
+
+  .home .text-three {
+    font-size: 14px;
+  }
+
+  .home .button button {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+
+  section .title span {
+    font-size: 22px;
+  }
+}
